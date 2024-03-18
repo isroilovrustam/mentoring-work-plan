@@ -1,0 +1,125 @@
+Telegram Bot Dars Reja:
+
+1.Kirish
+  ✅️️️️️️️Kurs haqida.
+  ✅️️️️️️️Telegramda yopiq kanal
+  ✅️️️️️️️Dasturlash asoslari
+  ✅️️️️️️️Dasturlar ro'yxati va pip bilan tanishuv
+  ✅️️️️️️️Terminalda ishlash,
+  ✅️️️️️️️Start bot
+3.Birinchi Bot Echo - Wikipedia
+  ✅️️️️️️️Dasturlash metodologiyasi
+  ✅️️️️️️️botFather
+  ✅️️️️️️️aiogram bilan tanishuv token olish.
+  ✅️message_handler() va answer() nima?
+  ✅️Echo bot
+  ✅️️️️️️️wikipedia
+  ✅️️️️️️️Wikibot dasturi kodi
+4.Default Keyboard
+  ✅️Defoult Keybordlar o'zini?
+  ✅️Defoult Keyboard yaratish
+  ✅️Ko'plab defoult keyboardlar bilan ishlash
+5.Inline keyboard
+  ✅️Inline Keybordlar o'zini?
+  ✅️Inline Keyboard yaratish
+  ✅️callback_data nima?
+  ✅️callback_query_handler nima?
+  ✅️Inline defoult keyboardlar bilan ishlash
+6.Qo'shimcha funksiyalar bilan ishlash.
+  ✅️reply(), default_buttonda(request_location, request_contact)
+  ✅️photo = open('image_url', 'rb')
+  ✅️answer_photo(), answer_document(), answer_audio()
+  ✅️await call.message.delete()
+7.Bot uchun shablon
+  ✅️️️️️️️Shablon bilan tanishuv 
+  ✅️️️️️️️Shabloni yuklab olish
+8.Handlers (Filterlar)
+  ✅️️️️️️️Commands, ContentType, Hashtags, User ID
+  ✅️️️️️️️Text, RegEx, States va boshqalar
+9.Holatlar va Tugmalar
+  ✅️️️️️️️Yangi repozitoriy
+  ✅️️️️️️️Holatlar(states)
+  ✅️️️️️️️Tugmalar(Keyboards)
+  ✅️️️️️️️Xabar osti tugmalari (Inline Keyboards). 1-qism
+  ✅️️️️️️️Xabar osti tugmalari (Inline Keyboards). 2-qism
+10.Text formating
+  ✅️️️️️️️Matnlarni formatlash
+11.Gurux uchun Bot
+  ✅️️️️️️️Guruh va shaxsiydagi xabarlar uchun filtrlar
+  ✅️️️️️️️Guruh ma'lumotlarini o'zgartirish
+12.Moderator
+  ✅️️️️️️️Moderator Bot
+13.Kanallar bilan ishlash
+  ✅️️️️️️️Kanalga obunani tekshirish
+  ✅️️️️️️️Middleware
+  ✅️️️️️️️Kanalga obunani tekshirish. Update.
+  ✅️️️️️️️Bot orqali kanalga post joylash
+14.Hujjatlar va media
+  ✅️️️️️️️Fayillarni serverga yuklab olish(Download)
+  ✅️️️️️️️Rasm fonini olib tashlaydigon bot 1-qism (Tanishuv)
+  ✅️️️️️️️Rasm fonini olib tashlaydigon bot 2-qism (Telegraph xosting)
+  ✅️️️️️️️Rasm fonini olib tashlaydigon bot 3-qism (BackgroundRemove API)
+  ✅️️️️️️️Rasm yuborishning 3 yo'li (ID, URL, File)
+  ✅️️️️️️️Albom yuborish
+  ✅️️️️️️️Lokatsiya bilan ishlash. Masofani hisoblash
+  ✅️️️️️️️Kontakt qabul qilish
+15.Inline mode.
+  ✅️️️️️️️Inline mode nima?
+  ✅️️️️️️️Matn, rasm, video, keyboardda qaytaramiz
+  ✅️️️️️️️Resultsni siklda yaratish
+16.API bilan ishlash
+  ✅️️️️️️️API nima?
+  ✅️️️️️️️Bot uchun API ni qayerdan topamiz?
+  ✅️️️️️️️Telegram Bot API
+  ✅️️️️️️️Minglab API lar ro'yxati
+  ✅️️️️️️️Pythonda API bilan ishlash
+  ✅️️️️️️️Kodlar: Apilarni ishlatib ko'rish
+  ✅️️️️️️️jsonExtract funksiyasi kodi
+  ✅️️️️️️️GitHub
+17.Ma`lumotlar ombori. SQLITE
+  ✅️️️️️️️SQLite. Kirish
+  ✅️️️️️️️Foydalanuvchilarni baraga qo'shish
+  ✅️️️️️️️Admin kamandalari. Reklama yuborish
+  ✅️️️️️️️Bazani yangilash. Test
+
+
+Gurux yaxshi o'zlashtira olsa o'tiladi
+
+18.Ma'lumotlar ombori. Postgresql
+  ✅️️️️️️️PostgreSQL o'rnatamiz
+  ✅️️️️️️️postgresql.py
+  ✅️️️️️️️Handlers
+  ✅️️️️️️️PyCharm Professional
+19.Botni serverga yuklash.
+  ✅️️️️️️️Botni Heroku Serveriga yuklash
+  ✅️️️️️️️Botni herokuga yuklash qadamlari
+  ✅️️️️️️️GitHubdan Herokuga avtodeploy
+  ✅️️️️️️️Amazon server. Tayyorgarlik
+  ✅️️️️️️️Amazon server. Linux server yaratamiz
+  ✅️️️️️️️Amazon server. SSH orqali ulanamiz
+  ✅️️️️️️️Amazon server. Fayllarni yuklash
+  ✅️️️️️️️Amazon server. Botni ishga tushiramiz
+  ✅️️️️️️️Amazon. Loglarni tekshirish. Botni nazorat gilib turish
+  ✅️️️️️️️DBook yordamida Telegram bot tuzish
+  ✅️️️️️️️Deploy. Telegram botni Railwayga joylash
+  ✅️️️️️️️Manli qo'llanma: AlOgram frameworkida yozilgan telegram botni railway.app saytiga tekinga joylash
+20.eBozor BOT
+  ✅️️️️️️️Kirish
+  ✅️️️️️️️Database
+  ✅️️️️️️️Keyboards
+  ✅️️️️️️️Handlers
+21.Django Admin paneli
+  ✅️️️️️️️Django o'rnatamiz
+  ✅️️️️️️️DB yaratamiz
+  ✅️️️️️️️Model yaratamiz
+  ✅️️️️️️️Botni panelga bog'laymiz
+  ✅️️️️️️️Django deploy bo'yicha qo'llanma
+22.BOT orqali to'lov.
+  ✅️KIRISH
+  ✅️Telegram API. sendInvoice
+  ✅️Provider Token
+  ✅️Mahsulotlar. Yetkazib berish
+  ✅️Invoice
+  ✅️Invice photo
+  ✅️Adminga xarid haqida xabar berish
+

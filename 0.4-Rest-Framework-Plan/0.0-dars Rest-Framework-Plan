@@ -1,0 +1,66 @@
+Beckend-Django.
+
+1 Django bilan tanishuv. Djangoni o'rnatish va sozlash
+    ✅ Initial CMD commands.
+    ✅ Proyekt yaratish, venv.
+    ✅ Config, settings, urls.
+    ✅ App, urls, views.
+2 Database, Admin panel va Modellar.
+    ✅ Makemigrations va migrate.
+    ✅ Modellar nima ekanligini tushunish
+    ✅ Model yaratish (Kutubxona -> Author, Category, Book modellar)
+    ✅ Admin panel, createsuperuser (https://docs.djangoproject.com/en/4.2/ref/contrib/admin/)
+3 Templates, HTML
+    ✅ Template papka yaratish, settings ga sozlash 
+    ✅ Static papka bilan ishlash(img, css, js)
+    ✅ Ma'lumotlarni renderlash
+    ✅ Bootstrap (https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+4 Templates, Forma bilan ishlash 
+    ✅ Template formani yaratish
+    ✅ Forma uchun model yaratish
+    ✅ Formani beckend da qabul qilib olish
+    ✅ Httrack (https://colorlib.com/wp/templates/)
+5 Blog site
+    ✅ Post model
+    ✅ Model Manager
+    ✅ ListView
+    ✅ Templatega ulash
+6 Blog site Contact, Comments
+    ✅ Contact model
+    ✅ Contact yuborish beckend ga saqlash
+    ✅ Comments model
+    ✅ Comments yuborish beckend ga saqlash
+7 Foydalanuvchi Login, Logout va Registerdan o'tkazish.
+    
+
+42 Ma'lumotlar bazasida munosabatlar (Database Relationships)
+43 Ma'lumotlar bazasida so'rovlar (Database Queries)
+44 Model formalar
+45 CRUD
+46 Static fayllarbilan ishlash
+47 Ikki va undan ortiq applar bilan ishlash Users app
+48 Django Signallar
+49 Foydalanuvchi Login, Logout va Registerdan o'tkazish.
+50 Foydalanuvchi profilini tahrirlash.
+51 Foydalanuvchi tomonidan CRUD
+52 Qidiruv va Pejinatsiya (Search va Pegination)
+53 Loyiha ish. Amaliy ish
+54 Loyiha ish. Amaliy ish
+55 API
+56 DRF va Serialayzerlar
+57 Nested Serialayzerlar va Serialayzer metodlar
+58 APIViews, ListAPIView, RetrieveAPIView
+59 Postman bilan ishlash
+60 DRF yasg
+61 JWT bilan autentifikatsia
+62 POST so' rovlar jo'natish
+63 Frontend & CORS dan ma'lumot qabul qilib olish
+64 Viewsetlar va routerlar
+65 DRF autentifikatsia
+66 API da login logout va signup
+67 Loyiha ishi. Amaliy ish
+68 Loyiha ishi. Amaliy ish
+69 GitHubga kirish. GitHub o'rnatish va uni komandalari bilan tanishish
+70 Deployment
+71 Ma'lumotlar bazasini deploy qilish
+72 Loyihani serverda sozlash
