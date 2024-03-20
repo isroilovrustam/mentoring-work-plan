@@ -8,31 +8,32 @@ Python core.
     ✅ Izoh yozishni ko'rib chiqish.
     ✅ Qo'shimcha ma'lumot sifatida (https://docs.python.org/3/tutorial/index.html) haqida ma'lumotlar.
     ✅ Qo'shimcha ma'lumot sifatida (https://www.w3schools.com/) haqida ma'lumotlar.
-2 Python sintaksisi, o'zgaruvchilar, number, string, Boolean, Casting.
-    ✅ Python sintaksisi
+2 O'zgaruvchilar, Data Types (number, string, Boolean, Casting), Input() va Sonlar bilan ishlash (+, -, *, /, %, //, **)
     ✅ O'zgaruvchilar
-    ✅ Number (int, float)
-    ✅ String ('', "", \", \n, \t) 
-    ✅ Boolean (True, False)
+    ✅ Data types(str, int, float, complex)
     ✅ Casting (Bir turdan boshqa turga o'tkazish)
+    ✅ Boolean (True, False)
     ✅ input()
-3 Pythonda ammalar (+, -, *, /, %, //, **)
-4 Pythonda tarmoqlanuvchi operatorlar: if ... else (and, or, not)
+    ✅ Pythonda Arifmetik operatorlar (+, -, *, /, %, //, **)
+3 Pythonda tarmoqlanuvchi operatorlar: if ... else (and, or, not)
     ✅ Shartlar bilan tanishish (a == b, a != b, a < b, a > b, a <= b, a >= b)
-    ✅ and, or, not
-5 Pythonda While sikl operatori (breack, countinue)
+    ✅ Mantiq operatorlari (and, or, not)
+4 Pythonda While sikl operatori (breack, countinue)
     ✅ While sikli bilan tanishish, misolar ishlab ko'rish (list, tuple, set, dic)
-    ✅ breach, countinue
-6 Pythonda For sikl operatori (end='')
-    ✅ For sikli bilan tanishish, misolar ishlab ko'rish (list, tuple, set, dic)
-    ✅ end=''
+    ✅ breach, countinue va end=" "
+5 Pythonda For sikl operatori 
+    ✅ For sikli bilan tanishish
     ✅ Ichma-ich sikllar.
-7 Pythonda String va string metodlar
+6 Takrorlash
+    ✅ O'tilgan mavzular bo'yicha misolar ishlash
+7 EXAM
+    ✅ O'tilgan mavzulardan imtihon
+8 Pythonda String va string metodlar
     ✅ Matnlarni ustida ammalar bajarish (bita harfni chiqarish [0], so'z yoki matini qirqib olish [2:8])
     ✅ String metodlari (title(), upper(), lower(), strip(), replace("H", "J"), count(), split(), join())
     ✅ format() -> (age = 36 txt = "My name is John, and I am {}" print(txt.format(age)))
     ✅ free matin ichida bor yki yoqligini tekshirish -> (txt = "The best things in life are free!" print("free" in txt))
-8 Pythonda List
+9 Pythonda List
     ✅ List nima?
     ✅ List elementlariga murojat qilish va o'zgartirish. (+, -)
     ✅ type(), len()
@@ -41,27 +42,26 @@ Python core.
     ✅ listt = list(range(1, 10))
     ✅ sort(), reverse()
     ✅ list ichida qidirilayotgan ma'lumot bor yoki yo'qligini tekshirish("qidirilayotgan ma'lumot" in (list nomi))
-9 Pythonda Tuple, Set
+10 Pythonda Tuple, Set
     ✅ Tuple() foydalanish, len(), type(), count(), index(), copy()
     ✅ Tuple elementlariga kirish. Tuplelarni bir biriga qo'shish va ko'paytirish. Kamchilik va afzaliklari.
     ✅ Set{} foydalanish, len(), type(), add(), update(), remove(), discard(), pop(), clear(), del
     ✅ Set elementlariga kirish.
-10 Dictionary
+11 Dictionary
     ✅ Lug'atlar bilan tanishish. Key va Valyu, qiymatiga murojat qilish.
     ✅ Lug'at get(), dict(), len(), type(), keys(), values(), items(), update(), pop(), popitem(), del, clear(), copy()
     ✅ Ichma-ich lug'atlar
-11 Pythonda Funksiya va Lambda
+12 Pythonda Funksiya va Lambda
     ✅ Funksiya bilan tanishish
-    ✅ Argument qabul qilmaydigon funksiyalar
     ✅ Argument qabul qiladigon funksiyalar
     ✅ return qiymat qaytaruvchi funksiya 
     ✅ Lambda bilan tanishish
-12 Pythonda Map, Rekursiv funksiya va *args, **kwargs
+13 Pythonda Map, Rekursiv funksiya va *args, **kwargs
     ✅ Funksiyaga doir misolar ishlash.
     ✅ Map nma?
     ✅ Rekursiv funksiya tanishish va bir nechta misolar ishlab ko'rish.
     ✅ *args, **kwargs haqida tushunchalar va foydalanish
-13 2D arrays 
+14 2D arrays 
     ✅ Misolar ishlash
 Loyiha ishi:
     ✅ Mehmonxona dasturi
@@ -69,12 +69,11 @@ Loyiha ishi:
 
 Pythonda OOP(obyektga yo'naltirilgan dasturlash).
 
-14 Pythonda OOP. Class va Object
+15 Pythonda OOP. Class va Object
     ✅ OOP nimaligi haqida umumiy tushuncha.
     ✅ Class yaratish
     ✅ Obyekt yaratish
     ✅ __init__() va __str__() funktsiyasi va self nima? 
-15 Pythonda OOP davomi
     ✅ Class methodlar
 16 Pythonda Vorisdorlik va Polimorfizm
     ✅ Ota class yaratish
