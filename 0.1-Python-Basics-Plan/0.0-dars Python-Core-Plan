@@ -30,7 +30,7 @@ Python core.
     ✅ O'tilgan mavzulardan imtihon
 8 Pythonda String va string metodlar
     ✅ Matnlarni ustida ammalar bajarish (bita harfni chiqarish [0], so'z yoki matini qirqib olish [2:8])
-    ✅ String metodlari (title(), upper(), lower(), strip(), replace("H", "J"), count(), split(), join())
+    ✅ String metodlari (title(), upper(), lower(), capitalize(), replace("H", "J"), index(), count()
     ✅ format() -> (age = 36 txt = "My name is John, and I am {}" print(txt.format(age)))
     ✅ free matin ichida bor yki yoqligini tekshirish -> (txt = "The best things in life are free!" print("free" in txt))
 9 Pythonda List
@@ -65,56 +65,62 @@ Python core.
     ✅ Misolar ishlash
 Loyiha ishi:
     ✅ Mehmonxona dasturi
+15 EXAM
+    ✅ O'tilgan mavzulardan imtihon
+16 Pythonda Modul yaratish, Dates, Random, Math, QRcode, Opencv va Turtle modullar
+    ✅ Modul yaratish
+    ✅ Datatime moduli, datetime.datetime.now(), date(), time(), hour, microsecond, minute, second 
+    ✅ Random moduli, randint, choice, shuffle
+    ✅ Math moduli, sqrt(), ceil(), floor(), pi, sin(), cos()
+    ✅ QRcode
+    ✅ Opencv
+    ✅ Turtle
 
 
 Pythonda OOP(obyektga yo'naltirilgan dasturlash).
 
-15 Pythonda OOP. Class va Object
+17 Pythonda OOP. Class va Object
     ✅ OOP nimaligi haqida umumiy tushuncha.
     ✅ Class yaratish
     ✅ Obyekt yaratish
     ✅ __init__() va __str__() funktsiyasi va self nima? 
     ✅ Class methodlar
-16 Pythonda Vorisdorlik va Polimorfizm
+18 Pythonda Vorisdorlik va Polimorfizm
     ✅ Ota class yaratish
     ✅ Voris olishlik
     ✅ super() funksiyasidan foydalanish
     ✅ Polimorfizm nima ekanligini tushunish
-17 Inkapsulatsiya va Abstrakshin
+19 Inkapsulatsiya va Abstrakshin
     ✅ Class xususiyatlarini yashirish, uuid dan foydalanish
     ✅ Abstrakshin
-18 Dunder metodlar 
+20 Dunder metodlar 
     ✅ __add__(self, other), __sub__(self, other), __pow__(self, power, module=None)->(**)
-19 Pythonda Dates, Random va Math modullar 
-    ✅ Datatime moduli, datetime.datetime.now(), date(), time(), hour, microsecond, minute, second 
-    ✅ Random moduli, randint, choice, shuffle
-    ✅ Math moduli, sqrt(), ceil(), floor(), pi, sin(), cos()
-20 Pythonda Fayllar bilan ishlash
+21 Pythonda Fayllar bilan ishlash
     ✅ File open('new_file.txt'), (with open(faylnomi) as fayl), read(), readlines(), write(), ('r', 'w', 'rb', 'wb')
-21 Pythonda JSON (JavaScript Object Notation) va RegEx modullar
-22 Algoritmlash. Search
+22 Pythonda JSON (JavaScript Object Notation) va RegEx modullar
+23 Algoritmlash. Search
     ✅ Linear search
     ✅ Binery search
-23 Algoritmlash. Sorting
+24 Algoritmlash. Sorting
     ✅ Bublle sort
     ✅ Quicksort
     ✅ Marge sort
-24 Data Structure kirish va LinkedList
+25 Data Structure kirish va LinkedList
     ✅ LinkedList Turlari
     ✅ Tugun (Node)
     ✅ Tugunlarni bir-biriga bog'lash
     ✅ Methodlar push() insertAfter() Append(), deleteNode()
-25 Stack
+26 Stack
     ✅ LIFO
     ✅ Methodlar push(), pop(), isEmpty(), isFull(), peek()
     ✅ Misol
-26 Queue
+27 Queue
     ✅ FIFO
     ✅ Deque
     ✅ Misol
-27 Tree
+28 Tree
     
-28 LeetCode
+29 LeetCode
     ✅ LeetCode bilan tanishish
     ✅ 8 ta misol 
-29 Amaliy ish. Python bo'yicha bilimlarni umumlashtirish Nazariy savol javoblar.
+30 Amaliy ish. Python bo'yicha bilimlarni umumlashtirish Nazariy savol javoblar.
