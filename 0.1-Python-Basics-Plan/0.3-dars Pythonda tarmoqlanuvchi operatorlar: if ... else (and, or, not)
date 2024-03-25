@@ -1,0 +1,93 @@
+0.3-dars Pythonda tarmoqlanuvchi operatorlar: if ... else (and, or, not)
+
+✅ Shartlar bilan tanishish (a == b, a != b, a < b, a > b, a <= b, a >= b)
+   Python matematikadan odatiy mantiqiy shartlarni qo'llab-quvvatlaydi:
+        Teng:                a == b
+        Teng emas:           a != b
+        Kichikroq:           a < b
+        Kichik yoki teng:    a <= b
+        Kattaroq:            a > b
+        dan katta yoki teng: a >= b
+  
+   Bu shartlar bir necha usulda qo'llanilishi mumkin, ko'pincha "if" iboralari va tsikllarda.
+   “if iborasi” if kalit so‘zi yordamida yoziladi .
+      Misol:
+      a = 33
+      b = 200
+      if b > a:
+         print("b is greater than a")
+
+   Chiziq
+      Python koddagi qamrovni aniqlash uchun chekinishga (satr boshidagi bo'sh joy) tayanadi.
+      Boshqa dasturlash tillari ko'pincha bu maqsadda jingalak qavslardan foydalanadi.
+
+   if iborasi cheksiz (xato keltirib chiqaradi):
+      Misol:
+      a = 33
+      b = 200
+      if b > a:
+      print("b is greater than a") # you will get an error
+
+   else:
+      Bundan tashqari, siz else dan ham foydalanishingiz mumkin:
+      Misol:
+      a = 200
+      b = 33
+      if b > a:
+        print("b is greater than a")
+      else:
+        print("b is not greater than a")
+
+   elif
+      elif kalit so'zi Pythonning "agar oldingi shartlar to'g'ri bo'lmagan bo'lsa , bu shartni sinab ko'ring" deyish usulidir.
+      Misol: 
+      a = 33
+      b = 33
+      if b > a:
+        print("b is greater than a")
+      elif a == b:
+        print("a and b are equal")
+      Ushbu misolda a b ga teng , shuning uchun birinchi shart to'g'ri emas,  
+      lekin elif sharti to'g'ri, shuning uchun biz "a va b teng" deb ekranga chop etamiz.
+
+   else kalit so'zi oldingi shartlar bilan ushlanmagan hamma narsani ushlaydi.
+      Misol:
+      a = 200
+      b = 33
+      if b > a:
+        print("b is greater than a")
+      elif a == b:
+        print("a and b are equal")
+      else:
+        print("a is greater than b")
+  
+      Bu misolda a b dan katta , shuning uchun birinchi shart to'g'ri emas, elif sharti ham to'g'ri emas,
+      shuning uchun biz else shartiga o'tamiz va "a b dan katta" deb ekranga chiqaramiz.
+
+✅ Mantiq operatorlari (and, or, not)
+   Mantiq operatorlari shartlarni birlashtirib ishlatish uchun kerak:
+      * and agar ikkala shart ham rost bo'lsa, rost qiymat qaytaradi
+      * or kamida bita shart rost bo'lsa ham rost qiymat qaytaradi
+      * not shart qiymatni teskariga o'zgartiradi, ya'ni rost bo'lsa yolg'on, yolg'on bo'lsa rost bo'ladi.
+   and
+      Misol:
+      a = 200
+      b = 33
+      c = 500
+      if a > b and c > a:
+        print("Both conditions are True")
+
+   or
+      Misol:
+      a = 200
+      b = 33
+      c = 500
+      if a > b or a > c:
+        print("At least one of the conditions is True")
+
+   not   
+      Misol:
+      a = 33
+      b = 200
+      if not a > b:
+        print("a is NOT greater than b")

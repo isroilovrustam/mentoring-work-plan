@@ -1,0 +1,163 @@
+0.2-dars O'zgaruvchilar, Data Types (number, string, Boolean, Casting), Input() va Sonlar bilan ishlash (+, -, *, /, %, //, **)
+
+✅ O'zgaruvchilar
+    O'zgaruvchilar ma'lum bir turdagi qiymatni o'zida saqlovchi konteynerlardir.
+    Boshqa dasturlash tillaridan farqli, Python o'zgaruvchilarni e'lon gilish uchun alohida buyrugga ega emas.
+    O'zgaruvchilar ularga qiymatni tenglashtirish orqali hosil gilinadi.
+    Quyida biz 2 ta o'zgaruvchini 2 xil turdagi qiymatga biriktiramiz va ekranga chiqaramiz:
+    Misol: 
+    x = 5
+    y = "Python"
+    print(x)
+    print(y)
+
+    Mainli o'zgaruvchilarni qo'shtirnoq yoki bittalik tinoqlar ichiga yozilish bilan e'lon
+    gilinishi mumkin:
+    Misol: 
+    # Ikkala o'zgaruvchi ham bir xil
+    x = "Dastur"
+    y = 'Dastur'
+
+    O'zgaruvchilar harflar yoki so'zlar bilan ifodalanishi mumkin.
+    Ularni ifodalash uchun ayrim qoidalar mavjud:
+        * o'zgaruvchi nomi harf yoki tag chiziq bilan boshlanishi kerak;
+        * o'zgaruvchi nomi raqam bilan boshlanmasligi kerak;
+        * o'zgaruvchi nomi faqat harflar, raqamlar va tag chiziqdan iborat bolishi mumkin;
+        * o'zgaruvchi nomlari katta-kichik harflarni farqlaydi (ism, iSm, ISM - bular 3
+        * o'zgaruvchi nomi orasida bo'shliq (probel) bolmasligi kerak;
+    Misol:
+    # To'g'ri nomlangan o'zgaruvchilar
+    myvar = "Python"
+    my_var = "Python"
+    _my_var = "Python"
+    myVar = "Python"
+    MYVAR = "Python"
+    myvar2 = "Python"
+    # Noto'g'ri nomlangan o'zgaruvchilar
+    2myvar = "Python"
+    my -var = "Python"
+    my var = "Python"
+
+    Qo'shimcha qoida sifatida:
+        * o'zgaruvchi nomini kichik harflar bilan yozing.
+        * o'zgaruvchi nomida 2 va undan ortiq so'z qatnashsa ularning orasini pastki chiziq (_) bilan ajrating (ism_sharif="Rustamjon Abdumalikovich")
+        * o'zgaruvchiga tushunarli nom bering (y=20 emas yosh=20, d="Korea" emas davlat = "Korea" va hokazo)
+        * shuningdek o'zgaruvchilarga Pythonda ishlatiladigan funktsiyalar va maxsus kalit so'zlarning (keywords) nomini bermang.
+
+    Bir nechta o'zgaruvchiga qiymat o'zlashtirish
+    Pythonda bir nechta o'zgaruvchiga qiymatlarni bir qatorning o'zida o'zlashtirish mumkin:
+    Misol: 
+    x, y, z = "Olma", "Banan" , "Nok"
+    print(x)
+    print(y)
+    print(z)
+    Va aksincha, bir qiymatni bir nechta o'zgaruvchiga o'zlashtirish ham mumkin:
+    Misol: 
+    x = y = z = "Nok"
+    print(x)
+    print(y)
+    print(z)
+
+    Pythonda o'zgaruvchilar yoki natijalarni ekranga chiqarish uchun print so'zidan foydalaniladi.
+    Biror matnga satr o'zgaruvchisini biriktirish uchun + belgisi ishlatiladi:
+    Misol:
+    x = "maroqlidir"
+    print("Dasturlashni o'rganish " + x)
+    Bundan tashqari + belgisini o'zgaruvchilarni o'zaro biriktirish uchun ham ishlatsa boladi:
+    Misol:
+    x = "Dasturlashni "
+    y = "o'rganamiz"
+    print(x + y)
+
+✅ Data types(str, int, float, complex)
+    Pythonda ma'lumot turlari:
+        Dasturlashda ma'lumot turlari muhim tushuncha sanaladi. Har bir ma'lumot turining o'z vazifasi bor.
+        Python quyidagi ma'lumot turlariga ega:
+        Matn turi: str
+        Raqam turi: int, float, complex
+        Ketma-ketlik turi: list, tuple, range
+        Ko'rsatish turi: dict
+        O'rnatish turi: set, frozenset
+        Mantiq turi: bool
+        Binar (ikkilik) tur: bytes, bytearray, memoryview
+        Yoq tur: None
+    Ma'lumot turini aniqlash
+        Ma'lumot turini aniqlash uchun type() funksiyasi ishlatiladi.
+        Hozirgi misolda x o'zgaruvchisini turini ekranga chiqaramiz:
+        Misol: 
+        x = 5
+        print(type(x))
+    Ma'lumot turlarini o'rnatish 
+        O'zgaruvchiga qiymatni o'zlashtirgan vaqtda uning ma'lumot turini avtomatik tarzda aniqlab uni ham o'zlashtiradi.
+        Natijada o'zgaruvchi o'sha ma'lumot turini o'zida saqlaydi:
+        x = "Python" - str(matn turi)
+        x = 20 - int(butun son turi)
+        x = 12.5 - float(o'nlik kasr turi) va hokazo.
+    Python sonlar:
+        Pythonda sonlar turlar 3:
+            * int (integer) turidagi sonlar o'z ichiga istalgan oraliqdagi musbat yoki manfiy butun sonlarni oladi:
+            * float turidagi sonlar o'z ichifga manfiy yoki musbat o'nlik kasr ko'rinishidagi sonlarni oladi:
+            * complex (kompleks sonlar) xuddi matematika sohasidagi kompleks sonlarni Pythonda ham ishlatish mumkin:
+        Misol:
+        x = 12
+        y = -38.54
+        z = 5j
+        print(type(x))
+        print(type(y))
+        print(type(z))
+
+✅ Casting (Bir turdan boshqa turga o'tkazish)
+    Bir turdan boshqa turga o'tkazish
+        Sonlarni bir turdan boshqasiga osongina o'zgartirish mumkin.
+        Buning uchun int(), float() va comlex() buyruqlari ishlatiladi:
+        Misol: 
+        x = 1     # int
+        y = 2.8   # float
+        z = 1j    # complex
+        # int turidan floatga o'tkazish
+        a = float(x)
+        # float turidan int(iinteger) ga o'tkazish
+        b = int(y)
+        # int turidan complexga o'tkazish
+        c = complex(z)
+        print(a)
+        print(b)
+        print(c)
+
+✅ Boolean (True, False)
+    Mantiqiy qiymatlar ikkita qiymatdan birini ifodalaydi: 
+        True yoki False
+    Siz Python-da har qanday ifodani baholashingiz va ikkita javobdan birini olishingiz mumkin True yoki False
+    Misol: 
+    print(10 > 9)
+    print(10 == 9)
+    print(10 < 9)
+
+✅ input()
+    input() funksiya foydalanuvchid ma'lumot kiritish imkonini beradi.
+    Misol:
+    print('Enter your name:')
+    x = input()
+    print('Hello, ' + x)
+    input() da kiritilgan ma'lumot str(string) sifatida qabul qilinadi.
+
+
+✅ Pythonda Arifmetik operatorlar (+, -, *, /, %, //, **)
+    Arifmetik operatorlar odatiy matematik amallarni bajarish uchun ishlatiladi:
+        * Qo'shish uchun (+)
+        * Ayirish uchun (-)
+        * Ko'paytirish uchun (*)
+        * Bo'lish uchun (/)
+        * Qoldiqli qo'lish uchun (%)
+        * Butunli bo'lish uchun (//)
+        * Darajaga ko'tarish (**)
+    Misol:
+    x = 10
+    y = 3
+    print(x + y)
+    print(x - y)
+    print(x * y)
+    print(x / y)
+    print(x % y)
+    print(x // y)
+    print(x ** y)

@@ -1,0 +1,292 @@
+1.9-dars  Inkapsulatsiya va Abstrakshin
+
+✅ Class xususiyatlarini yashirish, uuid dan foydalanish
+        Obyektga Yo'naltirilgan Dasturlashning tamoyillaridan biri bu inkapsulyatsiya, 
+        ya'ni obyektning xususiyatlarga to'g'ridan-to'g'ri (nuqta orqali) murojat qilishni va
+        ularning qiymatini o'zgartirishni taqiqlab qo'yish. Pythonda bunday yopiq xususiyatlarning 
+        nomi ikki pastki chiziq bilan boshlanadi:
+        
+        from uuid import uuid4
+        class Avto:
+            """Avtomobil klassi"""
+            def __init__(self,make,model,rang,yil,narh,km=0):
+                """Avtomobilning xususiyatlari"""
+                self.make = make
+                self.model = model
+                self.rang = rang
+                self.yil = yil
+                self.narh = narh
+                self.__km = km
+                self.__id = uuid4()
+            
+            def get_km(self):
+                return self.__km
+            
+            def get_id(self):
+                return self.__id
+        
+        
+        Yuqoridagi kodimizning 11-qatorida __km xususiyati avtomobilning necha km yurgani haqida ma'lumot saqlaydi 
+        va bu ma'lumotni tashqaridan o'zgartirib bo'lmaydi. Kodimizning 12-qatorida esa har bir yangi yaratilgan 
+        avtomobilga yangi, noyob va takrorlanmas ID generasiya qilish uchun uuid4() funksiyasidan foydalanayapmiz.
+        Deylik biz mashinalar sotish uchun onlayn bozor yaratsak, bozorimizga qo'shilgan har bir moshina endi o'zining 
+        ID raqamiga ega bo'ladi va bu ID raqamni to'g'ridan-to'g'ri (nuqta orqali) ko'rib bo'lmaydi.
+        
+        
+        avto1 = Avto("GM","Malibu","Qora",2020,40000,100000)
+        avto1.__km
+        
+        Yopiq xususiyatlarni ko'rish uchun esa alohida metodlar yozish maqsadga muvofiq bo'ladi (get_km() va get_id()):
+        
+        print(f"ID: {avto1.get_id()}")
+        
+        Bunday yopiq xususiyatlarni o'zgartirish ham metodlar orqali amalga oshirilishi kerak. 
+        Misol uchun mashinaning necha km yurganini o'zgartirish uchun klassimizga quyidagi
+        metodni qo'shamiz:
+        
+        def add_km(self,km):
+                """Mashinaning km ga yana km qo'shish"""
+                if km>=0:
+                    self.__km += km
+                else:
+                    print("Mashina km kamaytirib bo'lmaydi")
+        
+        avto1.add_km(1500)
+        print(avto1.get_km())
+        
+        Inkapsulyatsiyaning maqsadi obyektning ma'lum xususiyatlarini tashqi ta'sirdan himoya qilish.
+        Misol uchun yuqoridagi misolimizda mashinaning qancha yurganini faqat musbat tarafga
+        o'zgartirish mumkin, noyob ID raqamini esa umuman o'zgartirib bo'lmaydi.
+        
+        KLASSNING XUSUSIYATLARI VA METODLARI
+        Avvalgi darslarimizda biror klassdan yaratilgan har bir obyektning xususiyatlarini klass
+        ichidagidef __init__() medoti yordamida berayotgan edik. Bu metod qanday ishlaydi? Biz har gal
+        klassga murojat qilganimizda klass aynan shu __init__metodini ishga tushiradi va biz bergan xususiyatlar bilan yangi obyekt yaratadi.
+        Pythonda xususiyatlarni nafaqat obyektga balki to'g'ridan-to'g'ri klassga ham yuklash imkoniyati mavjud.
+        Bunda klassning xususiyatiga berilgan qiymat barcha obyektlar uchun umumiy bo'ladi.
+        Bu xususiyatni bir obyekt orqali o'zgartirilganda shu klassga oid barcha obyektlarda ham uning qiymati o'zgaradi.
+        
+        Klassga oid xususiyatlar def __init__() metodidan avval e'lon qilinadi.
+        
+        Keling tushunarli bo'lishi uchun quyidagi misolni ko'ramiz:
+        
+        class Avto:
+            """Avtomobil klassi"""
+            num_avto = 0
+            def __init__(self,make,model,rang,yil,narh,km=0):
+                """Avtomobilning xususiyatlari"""
+                self.make = make
+                self.model = model
+                self.rang = rang
+                self.yil = yil
+                self.narh = narh
+                self.__km = km
+                self.__id = uuid4()
+                Avto.num_avto += 1
+        
+          Kodni tahlil qilamiz:
+        1-qatroda Avto klassini e'lo qildik
+        3-qatorda Avto klassiga oid bo'lgan xususiyat num_avto yaratdik va unga 0 qiymatini berdik
+        Keyingi qatorlarda __init__ metodi yordamida klassdan yaratiladigan obyektlarning xususiyatlarini 
+        e'lon qildik va har gal bu metdoga murojat qilingandan num_avto ning qiymatini 1 ga oshradigan qilib qo'ydik (13-qator).
+        Yuqoridagi usul bilan endi biz dastur davomida Avto klassidan jami nechta obyektlar yaratilganini kuzatib borishimiz mumkin bo'ladi.
+        Bunda num_avto o'zgaruvchisiga istalgan obyekt orqali yoki klass nomi orqali murojat qilish mumkin:
+        
+        
+        KLASSNING XUSUSIYATLARINI INKAPSULYATSIYA QILISH
+        
+        Klassga oid xususiyatlar ham huddi yuoqridagi kabi nomidan avval ikki pastki chiziq qo'shish bilan inkapsulyatsiya qilinadi:
+        
+        class Avto:
+            """Avtomobil klassi"""
+            __num_avto = 0 # klassga oid xususiyat
+            def __init__(self,make,model,rang,yil,narh):
+                """Avtomobilning xususiyatlari"""
+                self.make = make
+                self.model = model
+                self.rang = rang
+                self.yil = yil
+                self.narh = narh
+                Avto.__num_avto += 1
+        
+        
+        KLASSGA OID METODLAR
+        Klasslarning o'ziga xos metodlari ham bo'lishi mumkin. Misol uchun yuqoridagi num_avto xususiyatini ko'rish 
+        uchun alohida metod yozishimiz mumkin. Klassga oid metodlar @classmethod dekoratori bilan boshlanadi
+        va obyektga oid metodlardan farqli ravishda self emas cls (class) argumentini qabul qiladi.
+        
+        
+        class Avto:
+            """Avtomobil klassi"""
+            __num_avto = 0
+            def __init__(self,make,model,rang,yil,narh,km=0):
+                """Avtomobilning xususiyatlari"""
+                self.make = make
+                self.model = model
+                self.rang = rang
+                self.yil = yil
+                self.narh = narh
+                self.__km = km
+                self.__id = uuid4()
+                Avto.__num_avto += 1
+            
+            @classmethod
+            def get_num_avto(cls):
+                return cls.__num_avto
+        
+        Klass metodlarga klassning nomi orqali murojat qilinadi:
+        
+        avto1 = Avto("GM","Malibu","Qora",2020,40000)
+        avto2 = Avto("GM","Lacetti","Oq",2020,20000)
+        avto3 = Avto("Toyota",'Carolla',"Silver",2018, 45000)
+        
+        print(Avto.get_num_avto())
+        
+        @classmethod bu maxsus dekorator. Dekoratorlar bu o'z ichiga funksiya oluvchi funksiyalar. 
+✅ Abstrakshin
+        
+        Pythonda abstraksiya nima?
+        Ob'ektga yo'naltirilgan dasturlashda merosxo'rlik , polimorfizm va inkapsulyatsiya yonma-yon ketadi. Ammo abstraktsiya ham OOPning muhim elementidir.
+        
+        Masalan , odamlar mashinani minglab alohida qismlar to'plami deb o'ylamaydilar. Buning o'rniga ular uni o'ziga xos xulq-atvori bilan aniq 
+        belgilangan ob'ekt sifatida ko'rishadi. Ushbu mavhumlik odamlarga avtomobilni tashkil etuvchi qismlarning murakkabligini bilmasdan, mashinadan 
+        foydalanishga imkon beradi. Ular dvigatelning transmissiyasi va tormoz tizimlarining qanday ishlashi tafsilotlarini e'tiborsiz qoldirishlari mumkin. 
+        Buning o'rniga ular ob'ektdan bir butun sifatida foydalanishda erkindirlar.
+        
+        
+        from abc import ABC, abstractmethod
+        
+        
+        class Shape(ABC):
+            @abstractmethod
+            def area(self):
+                pass
+        
+        
+        class Rectangle(Shape):
+            def init(self, length, width):
+                self.length = length
+                self.width = width
+        
+            def area(self):
+                return self.length * self.width
+        
+        
+        class Circle(Shape):
+            def init(self, radius):
+                self.radius = radius
+        
+            def area(self):
+                return 3.14 * self.radius  2
+        
+        
+        # Obyektlar yaratish
+        rectangle = Rectangle(5, 3)
+        circle = Circle(7)
+        
+        # Obyektlardan metodlarni chaqirish
+        print(rectangle.area())  # 15
+        print(circle.area())  # 153.86
+        shape = Shape()
+        print(shape.area())
+        
+        # ================================================================
+        from abc import ABC, abstractmethod
+        
+        
+        class Animal(ABC):
+            @abstractmethod
+            def sound(self):
+                pass
+        
+            @abstractmethod
+            def move(self):
+                pass
+        
+        
+        class Dog(Animal):
+            def sound(self):
+                return "Woof!"
+        
+            def move(self):
+                return "Running"
+        
+        
+        class Cat(Animal):
+            def sound(self):
+                return "Meow!"
+        
+            def move(self):
+                return "Jumping"
+        
+        
+        class Bird(Animal):
+            def sound(self):
+                return "Chirp!"
+        
+            def move(self):
+                return "Flying"
+        
+        
+        # Obyektlar yaratish
+        dog = Dog()
+        cat = Cat()
+        bird = Bird()
+        
+        # Obyektlardan metodlarni chaqirish
+        print(dog.sound())  # Woof!
+        print(dog.move())  # Running
+        
+        print(cat.sound())  # Meow!
+        print(cat.move())  # Jumping
+        
+        print(bird.sound())  # Chirp!
+        print(bird.move())  # Flying
+        
+        # ==============================================================
+        from abc import ABC, abstractmethod
+        
+        
+        class Shape(ABC):
+            @abstractmethod
+            def area(self):
+                pass
+        
+            @abstractmethod
+            def perimeter(self):
+                pass
+        
+        
+        class Rectangle(Shape):
+            def __init__(self, length, width):
+                self.length = length
+                self.width = width
+        
+            def area(self):
+                return self.length * self.width
+        
+            def perimeter(self):
+                return 2 * (self.length + self.width)
+        
+        
+        class Circle(Shape):
+            def __init__(self, radius):
+                self.radius = radius
+        
+            def area(self):
+                return 3.14 * self.radius  2
+        
+            def perimeter(self):
+                return 2 * 3.14 * self.radius
+        
+        
+        # Obyektlar yaratish
+        rectangle = Rectangle(5, 3)
+        circle = Circle(7)
+        
+        # Obyektlardan metodlarni chaqirish
+        print(rectangle.area())  # 15
+        print(rectangle.perimeter())  # 16
+        
+        print(circle.area())  # 153.86
+        print(circle.perimeter())  # 43.96

@@ -1,0 +1,112 @@
+1.4-dars 2D Arraylar
+
+"""   a = [int(i) for i in input().split()]   """
+
+# a = "salom__python__men__developerman"
+# b = a.split('__')
+# print(b)
+# print(*b)
+
+# a = '1 2 3 4 5 6 7 8 9'
+# b = a.split()
+# print(b)
+# for i in range(len(b)):
+#     b[i] = int(b[i])
+# print(b)
+# print(sum(b))
+
+# b = input().split()
+# print(b)
+# for i in range(len(b)):
+#     b[i] = int(b[i])
+# print(b)
+# print(sum(b))
+
+# b = input().split()
+# print(b)
+# a = []
+# for i in b:     # b = input().split()
+#     a.append(int(i))
+# print(sum(a))
+
+# a = [int(i) for i in input().split()]
+
+""" .join() Teskarisiga qaytarish """
+
+# string = '1__2__3__4__5__6'
+# print(string)
+# massiv = string.split('__')
+# print(massiv)
+# amal = massiv[::-1]
+# print(amal)
+# qayt = '__'.join(amal)
+# print(qayt)
+
+
+2 lik massiv (Двумерные массивы)
+
+Eng kota elementini topish
+arr = [
+     [1, 2, 3],
+     [4, 5, 6],
+     [9, 8, 6]
+ ]
+ print(arr)
+ l = max(arr[0])
+ for i in range(len(arr)):
+     if l < max(arr[i]):
+         l = max(arr[i])
+ print(l)
+
+ Diyanagalini topish (\)
+
+ v, g = [int(i) for i in input().split()]
+ arr = []
+ for i in range(g):
+     arr.append([int(j) for j in input().split()])
+ print(arr)
+ sum = 0
+ for i in range(g):
+     for j in range(g):
+         if i == j:
+             sum += arr[i][j]
+ print(sum)
+
+ input( 3 3
+        1 2 3
+        2 1 3
+        2 1 3
+        )
+ output( [[1, 2, 3], [2, 1, 3], [2, 1, 3]]
+         5
+        )
+
+ Diyanagalini topish (/)
+
+ v, g = [int(i) for i in input().split()]
+ arr = []
+ for i in range(g):
+     arr.append([int(j) for j in input().split()])
+ print(arr)
+ sum = 0
+ g = g-1
+ for i in range(v):
+     for j in range(v):
+         if i == j:
+             sum += arr[g][j]
+             g = g-1
+ print(sum)
+
+ input(
+      5 5
+      1 2 3 4 5
+      4 3 2 1 5
+      3 4 5 1 1
+      1 1 3 1 1
+      2 3 4 5 6
+ )
+
+ output(
+     [[1, 2, 3, 4, 5], [4, 3, 2, 1, 5], [3, 4, 5, 1, 1], [1, 1, 11, 1, 1], [2, 3, 4, 5, 6]]
+     14
+ )

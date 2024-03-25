@@ -1,0 +1,81 @@
+1.2-dars Pythonda Funksiya → def() va Lambda
+
+✅ Funksiya bilan tanishish
+    Funksiyalar
+      Funksiya koddagi bir blok hisoblanadi, u faqat chaqirilganda ishlaydi.
+      Ya'ni qandaydur funksiya tuzilgan, ammo uni hali ishlashiga buyuruq bermasak 
+      kodimiz ishga tushganda bu funksiya bajarilmaydi.
+
+      Funksiyaga ma'lumot uzatishimiz mumkin va bu ma'lumotlar funksiya uchun parametrlar hisoblanadi
+      Funksiya bizga ma'lumotlarni natija sifatida qaytarishi mumkin.
+
+      Funksiyalar def kalit so'zi bilan hosil qilinadi. Quyidagi kodimiz ishga tushsa, bizga hech qanday natija bermaydi.
+      Chunki biz faqat funksiya hosil qilgan bo'lamiz  
+      Misol:
+      def func():
+        print("Funksiya ishga tushdi")
+
+    Funksiyani chaqirish
+      Avval aytganimizdek funksiya faqat chaqirilganidagina ishlaydi.
+      Uni chaqirish uchun funksiyani nomini qavuslar bilan yozami.
+      Misol:
+      def func():
+        print("Funksiya ishga tushdi")
+
+✅ Argument qabul qiladigon funksiyalar
+    Argumentlar
+      Funksiyalarda ma'lumotlar argumentlar orqali uzatiladi.
+      Argumentlar funksiya nomidan keyin qavslar ichida kiritiladi.
+      Argumetnlar bir emas bir nechta bo'lishi mumkin, bunday holatlarda ular vergul bilan ajratiladi.
+      Quyidagi misolimizda bizda bita ism degan argumet bor:
+      Mislo:
+      def func(ism):
+        print(ism + "Salom")
+      func("Ali")
+      func("Muhammad")
+
+      Funksiya tuzilayotganda nechta argument bilan tuzilsa, chaqirilayotganda ham shuncha argument bilan chaqirilishi kerak.
+      Aks holda xatolik yuz beradi.
+      Misol:
+      def func(ism, familiya):
+        print(ism + " " + familiya)  
+      func("Ali", "Azimov")
+      Agar siz funktsiyani 1 yoki 3 ta argument bilan chaqirmoqchi bo'lsangiz, siz xatoga duch kelasiz:
+      
+✅ return qiymat qaytaruvchi funksiya 
+    Qiymat qaytarish
+      Funksiya qiymat qaytarish uchun return so'zidan foydalanamiz.
+      Masalan, instalgan soning kvadiratini chiqaruvchi funksiya tuzsak:
+      Misol:
+      def kvadrat(son):
+        return son * son
+      print(kvadrat(5))
+
+✅ Lambda bilan tanishish
+    Lambda
+      Lambda funksiyasi kichik anonim funksiyadir.
+      Lambda funktsiyasi har qanday argumentlarni qabul qilishi mumkin, lekin faqat bitta ifodaga ega bo'lishi mumkin.
+      Ifoda bajariladi va natija qaytariladi:
+      argumentga 10 qo'shing va natijani qaytaring:
+      Misol:
+      x = lambda a : a + 10
+      print(x(5))
+
+      Lambda funktsiyalari har qanday argumentlarni qabul qilishi mumkin:
+      a va b argumentlarni ko'paytirib natijani qaytarish:
+      Misol:
+      x = lambda a, b : a * b
+      print(x(5, 6))
+
+    Nega lambda funksiya ishlatamiz
+      Lambda funksiyalarni funksiya ichida boshqa anonim funksiya sifatida ishlatish qulay.
+      Masalan, bir argumentli funksiya bor va uning argument noma'lum songa ko'payadi.
+      Shu funksiyani lambda funksiya yordamida istalgan sonni ikkilantiradigan va uchlantiradigan funksiyaga aylantiramiz.
+      Milos:
+      def func(n):
+        return lambda a: a * n
+      ikkilantir = func(2)
+      uchlantir = func(3)
+      print(ikkilantir(5))
+      print(uchlantir(5))
+

@@ -1,0 +1,123 @@
+2.4-dars Sorting. Selectionsort, Bubblesort, Quicksort, Mergesort.
+Selectionsort
+
+Qisqacha tushuntiramiz.
+Agar mizda bir nechta raqamlar ro'yxati bo'lsa ularni Selectionsort da qanday tartiblaymiz.
+ 1. Mavjud royxat uzunligicha bo'sht royxat yaratib olamiz.
+ 2. Asl royxatdan eng katta qiymatni topamiz va yangi royxatga qo'shamiz.
+
+✅ Bublle sort
+	Eng soda tartiblash algoritmi
+	Qo'shni elementlarni solishtirish va o'rnini almashtirish orqali ishlaydi
+	
+	def bubbleSort(array: list) -> list:
+	    for i in range(len(array)):
+		for j in range(len(array)-i-1):
+		    if array[j]>array[j+1]:
+			array[j], array[j+1] = array[j+1], array[j]
+		    print(array)
+	    
+	
+	if __name__ == '__main__':
+	    array = [5, 2, 3, 8, 0, 4, 6, 7, 1]
+	    print(array)
+	    bubbleSort(array)
+	    # print(array)
+	
+	Divide and Counquer
+	
+	Ba'zan muammolarga yechim ko'rinmaydi.
+	Yaxshi dasturchi muammo oldida yengilmaydi.
+	Katta muammoni mayda muammolarga bo'lib olib, har bir muammoni alohida hal qiladi.
+	Bu divide and counquer metodi deb ataladi.
+	Divide and Counquer metodi juda ko'p muammolarga yechim bo'lishi mumkin.
+	Endi har daoim katta muammolarga duch kelsangiz manashu metoddan foydalaning.
+	
+	Keling endi divide and counquer metodini ko'ramiz
+	Bu uchun biz rekursiyani esga olamiz.
+	 1. To'xtash shartini topamiz
+	 2. To'xtash shartiga yetgunga qadar rekursiyani takrorlaymiz
+
+✅ Quicksort
+
+	Quicksort ham ma'lumotlarni tartiblash algoritmi.
+	Selection sortga nisbatan bir necha barobar tezroq ishlaydi.
+	Divide and Counquer yordamida ishlaydi.
+	
+	Tasavvur qiling biz biror array elemenlarini tartibga keltirmoqchimiz.
+	Birinchi qiladigan ishimiz To'xtash shartini topish.
+	To'xtash sharti ikki xil bo'lishi mumkin.
+	  1. Bo'sh array []
+	  2. Bir elementdan iborat array [9]
+	Yuqoridagi ikki holatda array tartiblik bo'ladi.
+	
+	from random import randrange
+	def qsort(array):
+	    if len(array)<2:        
+	        return array
+	    else:
+	        # pivot = array.pop(0)
+	        pivot = array.pop(randrange(len(array)))        
+	        kichik = [i for i in array if i<=pivot]
+	        katta = [i for i in array if i>pivot]
+	        # print(f"{kichik}+[{pivot}]+{katta}")
+	        return qsort(kichik) + [pivot] + qsort(katta)
+	
+	if __name__ == '__main__':
+	    array1 = [1, 5, 12, 0, -5, 66]
+	    print(array1)
+	    print(qsort(array1))
+	    array2 = list(range(20))
+	    print(array2)
+	    print(qsort(array2))
+	    array3 = ['olma', 'anjir', 'shaftoli', 'qovun', 'tarvuz']
+	    print(qsort(array3))
+	
+✅ Marge sort
+
+	Divide and Conquer usuli yordamida ishlaydigan tartiblash algoritmi
+	Ro'yxatni ikkiga bo'lib, ikki tartafni alohida tartiblab jamlash asosida ishlaydi
+	
+	def mergeSort(arr):
+		if len(arr) > 1:
+			mid = len(arr)//2
+			L = arr[:mid]
+			R = arr[mid:]
+	
+			mergeSort(L)
+			mergeSort(R)
+	
+			i = j = k = 0
+			while i < len(L) and j < len(R):
+				if L[i] < R[j]:
+					arr[k] = L[i]
+					i += 1
+				else:
+					arr[k] = R[j]
+					j += 1
+				k += 1
+		    
+			while i < len(L):
+				arr[k] = L[i]
+				i += 1
+				k += 1
+	
+			while j < len(R):
+				arr[k] = R[j]
+				j += 1
+				k += 1
+	
+	
+	def printList(arr):
+		for i in range(len(arr)):
+			print(arr[i], end=" ")
+		print()
+	
+	
+	# Driver Code
+	if __name__ == '__main__':
+		arr = [34, 25, 20, 5, 44, 12,9]
+		print("Tartibsiz array:", end="\n")
+		printList(arr)
+		mergeSort(arr)
+		printList(arr)

@@ -1,0 +1,66 @@
+0.1-dars Kirish. Pythonni o'rnatish va birinchi dasturni tuzish
+    
+✅ Pythonni o'rnatish.
+   https://www.python.org/downloads/
+✅ PyCharm o'rnatish.
+   https://www.jetbrains.com/pycharm/download/?section=mac
+✅ PyCharm haqida ma'lumotlar.
+   PyCharm
+      PyCharm - bu Python-da dasturlash uchun ishlatiladigan integratsiyalashgan ishlab chiqish muhiti (IDE) .
+      U kod tahlilini, grafik tuzatuvchini, integratsiyalangan birlik testerini, versiyalarni boshqarish tizimlari 
+      bilan integratsiyani ta'minlaydi va Django bilan veb-ishlab chiqishni qo'llab-quvvatlaydi . 
+      PyCharm Chexiya kompaniyasi JetBrains tomonidan ishlab chiqilgan.
+   Tarixi:
+      Birinchi marta 1980-yillarning oxirida Guido van Rossum tomonidan
+      ishlab chiqilgan Python Enhancement Proposals (PEP) jamoatchilik
+      muhokamasigan tashlangan va 1991-yildan boshlab dasturlash tili
+      sifatida ishlatila boshlanga.
+✅ Bir nechta soda dastur yaratib ko'rish.
+   Python sintaksisi
+      Python sintaksis juda soda tuzilishga ega.
+      Quyida "Salom dunyo" gapini ekranga chiqaruvchi kod ko'rsatilgan:
+      Misol:
+      print("Salom dunyo")
+   Qo'shtirnoq, bittirnoq va 3 tirnoqlarni ishlatish.
+      Misol:
+      print("Salom dunyo")
+      print('Assalom alaykum dasturchilar')
+      print("Dasturlashni o'rganamiz")
+      print('Men "Python" ni boshladim')
+      print("""
+      Bu yerda birinchi qator chiqadi
+      Bu yerda esa ikkinchi qator
+      v.h.k
+      """)
+✅ Izoh yozishni ko'rib chiqish.
+   Izohlar quyidagi holatda ishlatilinadi:
+      *Kodagi bajarilayotgan ishlarni tushuntirish uchun
+      *Kodni o'qilishini yanada osonlashtirish uchun
+      *Kodni ba'zi qisimlarini vaqtincha hisobga olmay turish uchun
+   Izoh hosil qilish:
+      Izohlar # belgisi bilan hosil qilinadi
+      Va Python o'sha qismni kod deb qabul qilmaydi
+      Misol:
+      # Bu yerda izoh
+      print("Salom dunyo")
+   Izohni kod yozilgan qator ohiridan ham yozish ham mumkin:
+      Misol:
+      print("Salom dunyo") # Bu yerda izoh
+   Kodni biror qismini izohga kiritsak o'sha qismi natija bermaydi. Quyidagi holatda (Salom dunyo) jumlasiekranga chiqmaydi:
+      Misol:
+      # print("Salom dunyo")
+      print("Dasturlashni o'rganamiz")
+   Ko'p qatorlik izohlar
+      Pythonda ko'p qatorlik izohlar hosil qilish uchun alohida belgiga ega emas.
+      Shuning uchun # belgisi ishlatiladi
+      Ammo 3 talik qo'shtirnoq ichiga yozilgan matinni o'zgaruvchiga biriktirilmasa ko'p qatorlik izoh sifatida ishlatish mumkin:
+      Misol: 
+      """
+      Bu izoh 
+      ko'p qatorlik 
+      izohdir 
+      """
+      print("Dasturlashni o'rganamiz")
+✅ Qo'shimcha ma'lumot sifatida 
+      https://docs.python.org/3/tutorial/index.html haqida ma'lumotlar
+      https://www.w3schools.com/) haqida ma'lumotlar

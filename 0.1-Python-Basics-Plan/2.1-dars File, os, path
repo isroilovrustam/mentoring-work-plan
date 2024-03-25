@@ -1,0 +1,92 @@
+2.1-dars Pythonda Fayllar bilan ishlash
+
+✅ File open('new_file.txt'), (with open(faylnomi) as fayl), read(), readlines(), write(), ('r', 'w', 'rb', 'wb')
+
+        file = open('pi.txt')
+        PI = file.read()
+        print(PI)
+        file.close()
+        
+        with open('pi.txt') as fayl:
+            pi = fayl.read()
+        
+        with open('data/pi.txt') as fayl:
+            pi = fayl.read()
+        
+        
+        faylnomi = 'data/math/numbers/pi.txt'
+        with open(faylnomi) as fayl:
+            pi = fayl.read()
+        
+        Qatorlarni ro'yxat ko'rinishida saqlab olish uchun, .readlines() metodidan foydalanamiz.
+        with open(filename) as file:
+            talabalar = file.readlines()
+        
+        print(talabalar)
+        
+        FAYLNI QATORMA-QATOR OʻQISH
+        
+        filename = 'data/talabalar.txt'
+        with open(filename) as file:
+            for line in file:
+                print(line)
+        
+        
+        YANGI FAYLGA YOZISH
+        open('file.txt','w') -> Faylni yozish uchun ochish. Fayl mavjud bo'lmasa yangi fayl yaratiladi.
+        Fayl mavjud bo'lsa tarkibi o'chib ketadi
+        
+        open('file.txt','r') -> Faylni faqat o'qish uchun ochish (yozib bo'lmaydi)
+        
+        open('file.txt','w+') -> Faylni o'qish va yozish uchun ochish. Fayl mavjud bo'lmasa yangi fayl yaratiladi. 
+        Fayl mavjud bo'lsa tarkibi o'chib ketadi. 
+        
+        open('file.txt','r+') -> Faylni o'qish va yozish uchun ochish.
+        
+        open('file.txt','a') -> Faylga ma'lumot qo'shish uchun ochish. Fayl mavjud bo'lmasa yangi fayl yaratiladi.
+        
+        
+        open('file.txt','a+') -> Faylga ma'lumot qo'shish va o'qish uchun yozish. Fayl mavjud bo'lmasa yangi fayl yaratiladi.
+        
+        
+        faylnomi = 'ustozlar.txt'# ochilayotgan (yaratilayotgan) fayl nomi
+        with open(faylnomi,'w') as fayl:
+            fayl.write('anvar narzullaev') # faylga yozilayotgan ma'lumot
+        
+        faylnomi = 'new_file.txt'
+        ism = 'Olimjon Hasanov'
+        tyil = 2004
+        with open(faylnomi,'w') as fayl:
+            fayl.write(ism)
+            fayl.write(str(tyil))
+        
+        faylnomi = 'new_file.txt'
+        ism = 'Olimjon Hasanov'
+        tyil = 2004
+        with open(faylnomi,'w') as fayl:
+            fayl.write(ism+'\n')
+            fayl.write(str(tyil)+'\n')
+        
+        FAYLGA MA'LUMOT QO'SHISH
+        
+        with open(faylnomi,'a') as fayl:
+            fayl.write('Alijon Valiyev\n')
+            fayl.write('2000')
+        
+        O'ZGARUVCHILARNI FAYLDA SAQLASH
+        PICKLE FAYLGA YOZISH
+        
+        import pickle
+        
+        talaba1 = {'ism':'hasan', 'familiya':'husanov', 'tyil':2003, 'kurs': 2}
+        talaba2 = {'ism':'alijon', 'familiya':'valiyev', 'tyil':2004, 'kurs': 1}
+        
+        with open('info','wb') as file:
+            pickle.dump(talaba1,file)
+            pickle.dump(talaba2,file)
+        
+        PICKLE FAYLDAN O'QISH
+        
+        with open('info','rb') as file:
+            talaba1 = pickle.load(file)
+            talaba2 = pickle.load(file)

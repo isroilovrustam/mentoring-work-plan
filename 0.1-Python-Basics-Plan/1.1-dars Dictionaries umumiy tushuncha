@@ -1,0 +1,255 @@
+1.1-dars Dictionaries umumiy tushuncha
+✅ Lug'atlar bilan tanishish. Key va Valyu, qiymatiga murojat qilish.
+    Python Dictionaries (lug'atlar)
+      Misol: 
+      thisdict = {
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 1964
+      }
+
+      Lug'atlar ma'lumotlar qiymatlarini kalit: qiymat juftlarida saqlash uchun ishlatiladi.
+      Lug'at buyurtma qilingan*, o'zgaruvchan va dublikatlarga ruxsat bermaydigan to'plamdir.
+      
+      Lug'atlar jingalak qavslar bilan yozilgan bo'lib, kalit va qiymatlarga ega:
+      Lug'at yaratish va chop etish:
+      Misol: 
+      thisdict = {
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 1964
+      }
+      print(thisdict)
+
+      Lug'at ob'ektlari
+      Lug'at ob'ektlari tartiblangan, o'zgaruvchan va dublikatlarga ruxsat bermaydi.
+      Lug'at elementlari kalit: qiymat juftliklarida taqdim etiladi va kalit nomidan foydalanish mumkin.
+      
+      Lug'atning "brend" qiymatini chop eting:
+      Misol: 
+      thisdict = {
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 1964
+      }
+      print(thisdict["brand"])
+
+
+      Lug'atlar tartiblangan desak, bu elementlarning belgilangan tartibi borligini va bu tartib o'zgarmasligini bildiradi.
+      Tartibsiz degani elementlarning belgilangan tartibi yo'qligini bildiradi, siz indeks yordamida elementga murojaat qila olmaysiz.
+      O'zgaruvchan
+      Lug'atlar o'zgaruvchan, ya'ni lug'at yaratilgandan so'ng elementlarni o'zgartirishimiz, qo'shishimiz yoki olib tashlashimiz mumkin.
+      Dublikatlarga ruxsat berilmagan
+      Lug'atlarda bir xil kalitga ega ikkita element bo'lishi mumkin emas:
+      Lug'at uzunligi
+      Lug'atda nechta element borligini aniqlash uchun funktsiyadan foydalaning len():
+      Lug'at ob'ektlari - Ma'lumotlar turlari
+      
+      Lug'at elementlaridagi qiymatlar har qanday turdagi ma'lumotlarga ega bo'lishi mumkin:
+      String, int, boolean va list ma'lumotlar turlari:
+      Misol: 
+      thisdict = {
+        "brand": "Ford",
+        "electric": False,
+        "year": 1964,
+        "colors": ["red", "white", "blue"]
+      }
+
+✅ Lug'at get(), dict(), len(), type(), keys(), values(), items(), update(), pop(), popitem(), del, clear(), copy()
+    Python - Lug'atga kirish
+      Elementlarga kirish
+      Kvadrat qavs ichidagi kalit nomiga murojaat qilib, lug'at elementlariga kirishingiz mumkin:
+      "Model" kalitining qiymatini oling:
+      Misol: 
+      thisdict = {
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 1964
+      }
+      x = thisdict["model"]
+
+      get()Sizga bir xil natija beradigan usul ham mavjud : 
+      "Model" kalitining qiymatini oling:
+      Misol:
+      thisdict =	{
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 1964
+      }
+      x = thisdict.get("model")
+
+      Kalitlarni oling
+      Usul keys()lug'atdagi barcha kalitlarning ro'yxatini qaytaradi.
+      Misol: 
+      thisdict = {
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 1964
+      }
+      x = thisdict.keys()
+
+      Qiymatlarni oling
+      Usul values()lug'atdagi barcha qiymatlar ro'yxatini qaytaradi.
+      Misol: 
+      thisdict = {
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 1964
+      }
+      x = thisdict.values()
+
+      Elementlarni oling
+      Usul items()lug'atdagi har bir elementni ro'yxatdagi kortejlar sifatida qaytaradi.
+      Kalit: qiymat juftliklari ro'yxatini oling
+      Misol: 
+      car = {
+      "brand": "Ford",
+      "model": "Mustang",
+      "year": 1964
+      }
+      x = car.items()
+
+      Kalit mavjudligini tekshiring
+      Lug'atda belgilangan kalit mavjudligini aniqlash uchun inkalit so'zdan foydalaning:
+      Lug'atda "model" mavjudligini tekshiring:
+      Misol: 
+      thisdict = {
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 1964
+      }
+      if "model" in thisdict:
+        print("Yes, 'model' is one of the keys in the thisdict dictionary")
+
+      Lug'atni yangilash
+      Usul update()lug'atni berilgan argumentdagi elementlar bilan yangilaydi.
+      Argument lug'at yoki kalit: qiymat juftliklari bilan takrorlanadigan ob'ekt bo'lishi kerak.
+      Ushbu usul yordamida avtomobilning "yilini" yangilang update() :
+      Misol: 
+      thisdict = {
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 1964
+      }
+      thisdict.update({"year": 2020})
+
+      Elementlarni qo'shish
+      Lug'atga element qo'shish yangi indeks kaliti yordamida va unga qiymat belgilash orqali amalga oshiriladi:
+      Misol: 
+      thisdict = {
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 1964
+      }
+      thisdict["color"] = "red"
+      print(thisdict)
+
+      Elementlarni olib tashlash
+      Lug'atdan elementlarni olib tashlashning bir necha usullari mavjud:
+      Usul pop()belgilangan kalit nomi bilan elementni olib tashlaydi:
+      Misol: 
+      thisdict = {
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 1964
+      }
+      thisdict.pop("model")
+      print(thisdict)
+
+      Kalit del so'z belgilangan kalit nomi bilan elementni olib tashlaydi:
+      Misol: 
+      thisdict = {
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 1964
+      }
+      del thisdict["model"]
+      print(thisdict)
+
+      Usul clear() lug'atni bo'shatadi:
+      Misol: 
+      thisdict = {
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 1964
+      }
+      thisdict.clear()
+      print(thisdict)
+
+✅ Ichma-ich lug'atlar
+    Ichki lug'atlar
+      Lug'at lug'atlarni o'z ichiga olishi mumkin, bu ichki lug'atlar deb ataladi.
+      Uchta lug'atdan iborat lug'at yarating:
+      Misol: 
+      myfamily = {
+        "child1" : {
+          "name" : "Emil",
+          "year" : 2004
+        },
+        "child2" : {
+          "name" : "Tobias",
+          "year" : 2007
+        },
+        "child3" : {
+          "name" : "Linus",
+          "year" : 2011
+        }
+      }
+          
+      Yoki yangi lug'atga uchta lug'at qo'shmoqchi bo'lsangiz:
+      Uchta lug'at yarating, so'ngra qolgan uchta lug'atni o'z ichiga olgan bitta lug'at yarating:
+      Misol: 
+      child1 = {
+        "name" : "Emil",
+        "year" : 2004
+      }
+      child2 = {
+        "name" : "Tobias",
+        "year" : 2007
+      }
+      child3 = {
+        "name" : "Linus",
+        "year" : 2011
+      }
+      myfamily = {
+        "child1" : child1,
+        "child2" : child2,
+        "child3" : child3
+      }
+      
+      Ichki lug'atlardagi elementlarga kirish
+      Ichki lug'atdagi elementlarga kirish uchun siz tashqi lug'atdan boshlab lug'atlar nomidan foydalanasiz:
+      2-bolaning ismini chop eting:
+      print(myfamily["child2"]["name"])
+
+    Lug'at orqali aylanish
+      Loop yordamida lug'atni aylanib chiqishingiz mumkin for.
+      Lug'atni aylanib chiqishda qaytariladigan qiymat lug'atning kalitlari hisoblanadi, ammo qiymatlarni qaytarish usullari ham mavjud.
+          
+      Lug'atdagi barcha asosiy nomlarni birma-bir chop eting:
+      Misol: 
+      for x in thisdict:
+        print(x)
+          
+      Lug'atdagi barcha qiymatlarni birma-bir chop eting:
+      Misol: 
+      for x in thisdict:
+        print(thisdict[x])
+          
+      values() Lug'at qiymatlarini qaytarish uchun usuldan ham foydalanishingiz mumkin :
+      Misol: 
+      for x in thisdict.values():
+        print(x)
+          
+      keys() Lug'at kalitlarini qaytarish uchun siz quyidagi usuldan foydalanishingiz mumkin :
+      Misol: 
+      for x in thisdict.keys():
+        print(x)
+          
+      Usuldan foydalanib, ikkala kalit va qiymatlar bo'ylab aylantiring items():
+      Misol: 
+      for x, y in thisdict.items():
+        print(x, y)
+          
+          
+          

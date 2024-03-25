@@ -1,0 +1,70 @@
+0.4-dars Pythonda While sikl operatori (breack, countinue, end=" ")
+
+✅ While sikli bilan tanishish
+    Python dasturlash tilida ikki xil sikl ishlatiladi. Bular while va for sikllari.
+    Ulaning qulayligi shundaki, ular belgilangan nuqtaga yetmaguncha ko'rsatilgan 
+    amalni qayta-qayta bajaraveradi. Shu sababli biz bir amalni qayta-qayta yozib o'tirmaymiz.
+    while va for qo'llanilish usuli va joyiga ko'ra farqlanadi. Bu darsda while bilan tanishamiz.
+
+    while sikli
+      while sikliga odatda bir shart berish kerak bo'ladi va o'sha shart
+      bajarilmaguncha u biz ko'rsatgan amalni qayta-qayta bajaraveradi. Masalan
+      1 dan 10 gacha bolgan sonlarni ekranga chiqarishimiz kerak bolsa,
+      buni quidagicha amalga oshiramiz: avval, boshlang'ich nuqtani belgilaymiz,
+      ya'ni ozgaruvchi 1 ga teng boladi. Song shunday shart beramizki toki
+      o'sha o'zgaruvchi 11 dan kichik ekan, uni har safar ekranga chiqarib shu
+      songa 1 qo'shib ketaversin. Natijada o'zgaruvchimiz toki 10 ga yetguncha
+      ushbu amalni bajaraveradi. 11 ga yetganda esa shart bajarilmay qoladi va
+      sikl to'xtaydi
+      Misol: 
+      i = 1
+      while i < 11:
+        print(i)
+        i += 1    # i = i + 1
+      Eslatma: i ni oshirishni unutmang, aks holda sikl abadiy davom etadi.
+
+    else
+      else kalit so'zi skil to'xtagandan so'ng ham yana bir amal bajarish imkonini beradi.
+      Masalan, sikl to'xtagandan so'ng to'xtaganligi haqida ma'lumot ekranga chiqsin:
+      Misol:
+      i = 1
+      while i < 11:
+        print(i)
+        i += 1
+      else:
+        print("sikl to'xtadi")
+
+✅ break, countinue va end=" " 
+    break
+      break kalit sozi sikini toxtatadi. Asosiy sikl davom etayotgan bolsa ham, biz
+      belgilagan nuqtada sikini to xtatadi.  Masalan yuqoridagi misolni olamiz. Uni
+      shunday o'zgartiramizki, o'zgaruvchimiz 5 ga yetganda siki to xtaydi va qolgan
+      sonlarni ekranga chiqarmaydi:
+      Misol: 
+      i = 1
+      while i < 11:
+        print(i)
+        if i == 5:
+          break
+        i += 1
+
+    continue
+      continue kalit so zi bilan siklning bazi nuqtalaridan sakrab o'tish mumkin.
+      Masalan, biz 6 dan tashqari 1 dan 10 gacha bolgan barcha sonlarni ekranga
+      chiqaramiz. Bunda 6 soni hisobga olinmay undan o'tib ketiladi:
+      Misol: 
+      i = 1
+      while i < 11:
+        i += 1
+        if i == 6:
+          continue
+        print(i)
+ 
+    end=" " 
+      for va while orqali chiqarilayotgan sonlarni bir qatorda chiqarishimiz mumkin
+      Misol:
+      i dan 6 gacha bo'lgan sonlarni bir qatorga chiqarish
+      i = 1
+      while i < 6:
+          print(i, end=" ")
+          i += 1

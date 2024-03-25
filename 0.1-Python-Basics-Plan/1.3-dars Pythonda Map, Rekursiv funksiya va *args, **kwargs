@@ -1,0 +1,84 @@
+1.3-dars Pythonda Map, Rekursiv funksiya va *args, **kwargs
+✅ Map nma?
+✅ Rekursiv funksiya tanishish va bir nechta misolar ishlab ko'rish.
+    Rekursiya.
+        Rekursiv funksiyalar ikki qismdan iborat bo'ladi
+        1. Rekursiya sharti(recursive case)
+        2. To'xtash sharti(base case)
+        Misol:
+        def sana(n):
+            print(n)    
+            if n <= 1:
+                return
+            else:
+                sana(n - 1)
+        sana(10)
+
+    Faktarialni hisoblash n faktorial hisoblash uchun funksiya
+        Misol:
+        def fact(x):
+            print(x,end=' ')
+            if x == 1:
+                return 1
+            else:
+                return x * fact(x-1)
+        print(fact(5))
+
+✅ *args, **kwargs haqida tushunchalar va foydalanish
+    Ixtiyoriy dalillar, *args
+    Agar funktsiyangizga qancha argument o'tkazilishini bilmasangiz, funktsiya ta'rifida parametr nomidan oldin (*) qo'shing.
+    Shunday qilib, funktsiya bir qator argumentlarni oladi va mos ravishda elementlarga kirishi mumkin:
+    Agar argumentlar soni noma'lum bo'lsa, *parametr nomidan oldin a qo'shing:
+        Misol:
+        def my_function(*kids):
+          print("The youngest child is " + kids[2])
+        my_function("Emil", "Tobias", "Linus")
+
+        def sonlar(*args):
+            for i in args:
+                print(i)
+        sonlar(123, 34, 3, 43, 50)
+
+        def sonlar(*args):
+            sum = 0
+            for i in args:
+                sum += i
+            print(sum)
+        sonlar(1, 34, 3, 4, 5)
+
+    Python hujjatlarida o'zboshimchalik bilan argumentlar ko'pincha *args ga qisqartiriladi .
+
+    Kalit so'z argumentlari
+    Siz argumentlarni kalit = qiymat sintaksisi bilan ham yuborishingiz mumkin .
+    
+    Shunday qilib, argumentlar tartibi muhim emas.
+    Misol:
+        def my_function(child3, child2, child1):
+          print("The youngest child is " + child3)
+
+        my_function(child1 = "Emil", child2 = "Tobias", child3 = "Linus")
+
+    Ixtiyoriy kalit so'z argumentlari, **kwargs
+    Agar funktsiyangizga qancha kalit so'z argumentlari o'tkazilishini bilmasangiz,
+    ikkita yulduzcha qo'shing: **funktsiya ta'rifidagi parametr nomidan oldin.
+    Shunday qilib, funktsiya argumentlar lug'atini oladi va shunga mos ravishda elementlarga kirishi mumkin:
+
+    Agar kalit so'z argumentlari soni noma'lum bo'lsa, **parametr nomidan oldin ikkita qo'shing:
+    Misol:
+        def my_function(**kid):
+          print("His last name is " + kid["lname"])
+        my_function(fname = "Tobias", lname = "Refsnes")
+
+    Python hujjatlarida ixtiyoriy Kword argumentlari ko'pincha **kvarglarga qisqartiriladi .
+
+    Standart parametr qiymati
+    Quyidagi misol standart parametr qiymatidan qanday foydalanishni ko'rsatadi.
+    Agar funktsiyani argumentsiz chaqirsak, u standart qiymatdan foydalanadi:
+    Misol:
+        def my_function(country = "Norway"):
+          print("I am from " + country)
+        my_function("Sweden")
+        my_function("India")
+        my_function()
+        my_function("Brazil")
+

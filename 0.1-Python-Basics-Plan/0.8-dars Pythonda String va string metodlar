@@ -1,0 +1,33 @@
+0.8-dars Pythonda String va string metodlar
+✅ ("\n", "\t", "\"", "\b")
+✅ Matnlarni ustida ammalar bajarish (bita harfni chiqarish [0], so'z yoki matini qirqib olish [2:8])
+    Matnlar ustida turli xil ammalarni bajarsak bo'ladi.
+    Misol:
+    ism = "Muhammadamin"
+        print(ism[3])        # Berilgan idexdagi harifni chiqazib beradi
+        print(ism[:3])       # Berilgan idexgacha bo'lgan harflarni chiqazadi
+        print(ism[2:])       # Berilgan idexdan oxirgi harfgacha chiqazib beradi
+        print(ism[3:6])      # Berilgan chegaralar o'rtasidagi ma'lumotlarni chiqazib beradi
+        print(ism[-1])       # Oxiridan sanoqni bildiradi
+        print(ism[-5: -1])   # Teskari sanoqlar
+        print(ism[1:5:2])    # Chegaralani qadamlar soni bilan chiqaradi
+        print(ism[5: 1: -1]) # Teskari chiqarish
+        print(ism[-1::-1])   # Teskari malumot qaytarish
+✅ String metodlari (title(), upper(), lower(), capitalize(), replace("H", "J"), index(), count())
+    String metodlari dan foydalanish:
+    Misol: 
+    ism = "muhammadamin ISMOILOV"
+        print(ism.title())            # Berilgan matndagi so'zlarni bosh harfini katta qilib beradi
+        print(ism.upper())            # Berilgan matn(so'zni) barcha hariflarini Katta qilib beradi
+        print(ism.lower())            # Berilgan matn(so'zni) barcha hariflarini kichik qilib beradi
+        print(ism.capitalize())       # Berilgan matini birinchi so'zni birinchi harfini kichik qilib beradi
+        print(ism.replace("m", "_"))  # Brilgan harf o'rniga boshqa argument qo'yadi
+        print(ism.index("h"))         # Berilgan harifni indexini aniqlab beradi
+        print(ism.count("m"))         # Berilgan harflarni matnda nechta ekanligini sanab beradi
+✅ format()
+    Usul format()o'tkazilgan argumentlarni oladi, ularni formatlaydi va ularni to'ldiruvchilar bo'lgan satrga joylashtiradi {}
+    Misol:
+    age = 36 
+    txt = "My name is John, and I am {}"     
+    print(txt.format(age)))
+✅ free matin ichida bor yki yoqligini tekshirish -> (txt = "The best things in life are free!" print("free" in txt))

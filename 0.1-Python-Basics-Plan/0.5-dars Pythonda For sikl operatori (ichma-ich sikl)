@@ -1,0 +1,88 @@
+    0.5-dars Pythonda For sikl operatori (ichma-ich sikl)
+
+✅ For sikli bilan tanishish
+    Satr bo'ylab sikl
+        Satr boylab sikl amalga oshirilsa satrdagi har bitta harfga murojaat boladi. Chunki
+        satr harflar to plamidan tashkil topgan. Hozir quyidagi so'zning barcha harflarini ekranga chiqaramiz:
+        Misol: 
+        for a in "dastur":
+            print(a)
+
+    break
+        break kalit so'zi bilan sikini to tatamiz, hattoki sikl to'xtamagan bolsa ham.
+        Masalan, dastur so'zining harflarini birma-bir ekranga chiqarish siklini ishga
+        tushuramiz va s harfiga yetganda sikini to'xtatamiz:
+        Misol:
+        for i in "dastur":
+            print(i)
+            if i == "s":
+                break
+
+        Endi e tiborimizni bir narsaga qaratsak. Yugoridagi kodda print buyrug ini break
+        buyrug'idan oldinroq qo'ygan edik. Shu sababli avval s harfi ekranga chigib,
+        song sikl toxtadi. Endi print buyrug ini pastroqqa qo'yamiz. Bunda s harfi 
+        ekranga chiqmay qoladi, chunki sikl undan avvalroq to'xtaydi.
+        Misol:
+        for i in "dastur":
+            if i == "s":
+                break
+            print(i)   
+
+    continue
+        continue kalit so'zi siklning ayrim joylaridan sakrab otadi. Aniqroq gilib
+        aytganda sikl davomida ayrim nuqtalarga kelganda ko'rsatilgan amalni bajarmay ketadi.
+        Masalan, python sozidagi harflarni ekranga chiqaramiz. Va shunda h harfini tashlab ketamiz:
+        Misol:
+        for i in "python":
+            if i == "h":
+                continue
+            print(i)  
+
+    range()
+        range ) funksiyasi biror amalni belgilangan marta bajarish yoki biror
+        oraliqdagi sonlarga murojaat gilish uchun go'llaniladi. Bunda range) ichiga
+        kerakli son qo yiladi va sanoq avtomatik tarzda 0 dan boshlanib korsatilgan
+        songacha davom etadi. Ammo uning o'zi hisobga kirmaydi.
+        Tushunish uchun bir misol koramiz. 0 dan 5 gacha (5 soni hisobga kirmaydi)
+        bolgan sonlarni ekranga chiqaramiz
+        Misol: 
+        for i in range(5):
+            print(i)
+
+        Mavzuning birinchi qismida range() funksiyasida sanoq avtomatik 0 dan boshlanishi aytib o'tdik. 
+        Biz uni o'zimiz istagan sondan boshlashimiz ham mumkin.
+        Masalan 1 dan 5 gacha bolgan sonlarni ekranga chiqaramiz. Bunda sanoq 1 dan boshlanishi uchun 1 sonini ham
+        kiritamiz. Demak, biz 1 dan 6 gacha bolgan oraliqni kiritamiz.
+        Misol:
+        for i in range(1, 6):
+            print(i)
+
+        range() funksiyasida sonlar avtomatik bittaga ortib boradi. Ammo bu holatni
+        ham o'zgartirish mumkin. Bunda oraliqni ko'rsatgandan so'ng sanoq nechtaga
+        ortishini ham kiritamiz. Shunda funksiya ichidagi dastlabki ikkita son oraliqni,
+        uchinchi son esa sanoq nechtaga ortishini korsatadi.
+        Masalan, 1 dan 10 gacha bolgan faqat juft sonlarni ekranga chiqarmoqchimiz.
+        Bunda oraliqni 2 dan 11 gacha deb belgilaymiz. Shunda sanoq 2 dan
+        boshlanadi va 10 gacha davom etadi Har safar sanoq ikkitaga ortishi uchun
+        uchinchi bo'lib 2 sonini ham kiritamiz:
+        Misol:
+        for i in range(2, 11, 2):
+            print(i)
+
+    else
+        else kalit sozi sikl tugagach ham yana bir amal bajarish imkonini beradi. Odatda
+        bundan sikl tugagani haqida ma'lumot berishda foydalaniladi.
+        Masalan, python sozini besh marta ekranga chiqarmoqchimiz va sikl
+        tugagach shu haqda xabar beramiz. Bunda endi e tibor bering, rangel)
+        funksiyasi bilan sanoq asosida sonlarni ekranga chiqarmayapmiz, balki shuncha
+        marta bir xil amalni bajarayapmiz:
+        Misol:
+        for i in range(5):
+            print("Salom")
+        else:
+            print("sikl tugadi!")
+
+✅ Ichma-ich sikllar.
+
+    Sikl ichida sikl qollanganda ichki sikl tashqi sikining har bitta boshqichida bir
+    martadan bajariladi.

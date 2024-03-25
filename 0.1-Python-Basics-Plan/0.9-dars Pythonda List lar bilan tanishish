@@ -1,0 +1,307 @@
+  0.9-dars Pythonda List
+✅ List nima?
+    List (Ro'yxatlar)
+      Listlar bitta o'zgaruvchida bir nechta elementlarni saqlash uchun ishlatiladi.
+      Listlar Python’da maʼlumotlar toʻplamini saqlash uchun ishlatiladigan 4 ta oʻrnatilgan
+      maʼlumotlar turlaridan biri, qolgan 3 tasi Tuple , Set va Dictionary boʻlib , ularning barchasi 
+      turli sifat va foydalanishga ega.
+
+      Python to'plamlari (massivlar)
+      Python dasturlash tilida to'rtta turdagi ma'lumotlar to'plami mavjud:
+      List - bu tartiblangan va o'zgaruvchan to'plam. Takroriy a'zolarga ruxsat beradi.
+      Tuple - bu tartiblangan va o'zgarmas to'plam. Takroriy a'zolarga ruxsat beradi.
+      Set - tartibsiz, oʻzgarmas* va indekslanmagan toʻplamdir. Takroriy a'zolar yo'q.
+      Dictionary - tartibli** va o'zgaruvchan to'plamdir. Takroriy a'zolar yo'q.
+
+    List kvadrat qavslar yordamida tuziladi:
+      List yaratish:
+      thislist = ["apple", "banana", "cherry"]
+      print(thislist)
+
+    List elementlari
+      List elementlari tartiblangan, o'zgartirilishi mumkin va takroriy qiymatlarga ruxsat beriladi.
+      List elementlari indekslanadi, birinchi element indeksga ega [0], ikkinchi element indeksga ega [1]va hokazo.
+    O'zgaruvchan
+      List oʻzgarishi mumkin, yaʼni biz roʻyxatni yaratilgandan keyin oʻzgartirishimiz, qoʻshishimiz va oʻchirishimiz mumkin.
+
+    Dublikatlarga ruxsat berish
+      Listlar indekslanganligi sababli, ro'yxatlar bir xil qiymatga ega bo'lishi mumkin:
+      Listlar takroriy qiymatlarga ruxsat beradi:
+      thislist = ["apple", "banana", "cherry", "apple", "cherry"]
+      print(thislist)
+✅ List elementlariga murojat qilish va o'zgartirish. (+, -)
+    Elementlarga kirish
+      List elementlari indekslanadi va siz ularga indeks raqamiga murojaat qilish orqali kirishingiz mumkin:
+      Eslatma: Birinchi element 0 indeksiga ega.
+    Ro'yxatning ikkinchi elementini chop eting:
+      thislist = ["apple", "banana", "cherry"]
+      print(thislist[1])
+    Salbiy indekslash
+      Salbiy indekslash oxiridan boshlanadi degan ma'noni anglatadi
+      -1 oxirgi elementga ishora qiladi, -2 ikkinchi oxirgi elementga ishora qiladi va hokazo.
+    Ro'yxatning oxirgi elementini chop eting:
+      thislist = ["apple", "banana", "cherry"]
+      print(thislist[-1])
+
+    Indekslar diapazoni
+      Siz diapazonni qaerdan boshlash va qayerdan tugatishni belgilash orqali bir qator indekslarni belgilashingiz mumkin.
+      Diapazonni belgilashda qaytariladigan qiymat belgilangan elementlar bilan yangi ro'yxat bo'ladi.
+      Eslatma: Qidiruv 2-indeksda (qo'shilgan) boshlanadi va 5-indeksda (qo'shilmagan) tugaydi.
+
+    Uchinchi, to'rtinchi va beshinchi bandlarni qaytaring:
+      thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+      print(thislist[2:5]
+
+    Boshlanish qiymatini qoldirsangiz, diapazon birinchi elementdan boshlanadi:
+      Bu misol elementlarni boshidan qaytaradi, lekin "kivi" ni o'z ichiga olmaydi:
+      thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+      print(thislist[:4])
+
+    Yakuniy qiymatni qoldirib, diapazon ro'yxatning oxiriga o'tadi:
+      Ushbu misol "gilos" dan oxirigacha bo'lgan narsalarni qaytaradi:
+      thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+      print(thislist[2:])
+
+    Salbiy indekslar diapazoni
+      Agar siz qidiruvni roʻyxat oxiridan boshlamoqchi boʻlsangiz, salbiy indekslarni belgilang:
+      Ushbu misol "orange" (-4) dan "mango" (-1) ni o'z ichiga olmaydi:
+      thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+      print(thislist[-4:-1])
+✅ type(), len()
+    Type()
+      Python nuqtai nazaridan, ro'yxatlar "ro'yxat" ma'lumotlar turiga ega ob'ektlar sifatida aniqlanadi:
+      Listning ma'lumotlar turi qanday?
+      mylist = ["apple", "banana", "cherry"]
+      print(type(mylist))
+    len() list uzunligi
+      Listda nechta element borligini aniqlash uchun funktsiyadan foydalaning len():
+      Listdagi elementlar sonini chop eting:
+      thislist = ["apple", "banana", "cherry"]
+      print(len(thislist))
+
+    List elementlari - Ma'lumotlar turlari
+      List elementlari har qanday turdagi ma'lumotlarga ega bo'lishi mumkin:
+      String, int va boolean ma'lumotlar turlari:
+      list1 = ["apple", "banana", "cherry"]
+      list2 = [1, 5, 7, 9, 3]
+      list3 = [True, False, False]
+
+    List turli xil ma'lumotlarni o'z ichiga olishi mumkin:
+      Satrlar, butun sonlar va mantiqiy qiymatlardan iborat ro'yxat:
+      list1 = ["abc", 34, True, 40, "male"]
+
+✅ Biz bergan ma'lumot listda mavjud yoki yoqligini tekshirish.
+    Element mavjudligini tekshiring
+      Belgilangan element ro'yxatda mavjudligini aniqlash uchun inkalit so'zdan foydalaning:
+      Ro'yxatda "apple" mavjudligini tekshiring:
+      thislist = ["apple", "banana", "cherry"]
+      if "apple" in thislist:
+        print("Yes, 'apple' is in the fruits list")
+
+✅ Pythonda List metodlari insert(), append(), extend(), remove(), pop(), del, clear(), copy(), count()
+    Python - Ro'yxat elementlarini o'zgartirish
+      Element qiymatini o'zgartirish
+      Muayyan elementning qiymatini o'zgartirish uchun indeks raqamiga qarang:
+      Ikkinchi elementni o'zgartiring:
+      Misol:
+      thislist = ["apple", "banana", "cherry"]
+      thislist[1] = "blackcurrant"
+      print(thislist)
+
+      Element qiymatlari diapazonini o'zgartirish
+      Muayyan diapazondagi elementlarning qiymatini o'zgartirish uchun yangi qiymatlar bilan ro'yxatni
+      belgilang va yangi qiymatlarni kiritmoqchi bo'lgan indeks raqamlari oralig'iga murojaat qiling:
+      "banana" va "cherry" qiymatlarini "blackcurrant" va "watermelon" qiymatlari bilan o'zgartiring:
+      Misol:
+      thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+      thislist[1:3] = ["blackcurrant", "watermelon"]
+      print(thislist)
+
+      Agar siz almashtirganingizdan ko'proq narsalarni qo'shsangiz, yangi elementlar siz ko'rsatgan
+      joyga kiritiladi va qolgan elementlar mos ravishda harakatlanadi:
+      Ikkinchi qiymatni ikkita yangi qiymat bilan almashtiring :
+      Misol:
+      thislist = ["apple", "banana", "cherry"]
+      thislist[1:2] = ["blackcurrant", "watermelon"]
+      print(thislist)
+
+      Eslatma: Kiritilgan elementlar soni almashtirilgan elementlar soniga mos kelmasa, roʻyxat uzunligi oʻzgaradi.
+
+      Agar siz almashtirganingizdan kamroq narsalarni kiritsangiz, yangi elementlar siz ko'rsatgan joyga kiritiladi 
+      va qolgan elementlar mos ravishda harakatlanadi:
+      Ikkinchi va uchinchi qiymatlarni bitta qiymat bilan almashtiring :
+      Misol:
+      thislist = ["apple", "banana", "cherry"]
+      thislist[1:3] = ["watermelon"]
+      print(thislist)
+
+      Elementlarni kiritish
+        Mavjud qiymatlarni almashtirmasdan yangi ro'yxat elementini kiritish uchun biz usuldan foydalanishimiz mumkin insert().
+        Usul insert() belgilangan indeksga element kiritadi:
+        Uchinchi element sifatida "tarvuz" ni qo'ying:
+        Misol:
+        thislist = ["apple", "banana", "cherry"]
+        thislist.insert(2, "watermelon")
+        print(thislist)
+
+        Eslatma: Yuqoridagi misol natijasida ro'yxat endi 4 ta elementni o'z ichiga oladi.
+
+      Elementlarni qo'shish
+        Roʻyxat oxiriga element qoʻshish uchun append() usulidan foydalaning:
+        append() Elementni qo'shish usulidan foydalanish :
+        Misol:
+        thislist = ["apple", "banana", "cherry"]
+        thislist.append("orange")
+        print(thislist)
+
+      Ro'yxatni kengaytirish
+        Boshqa ro'yxatdagi elementlarni joriy ro'yxatga qo'shish uchun extend() usuldan foydalaning.
+        thislistga tropical elementlarni qo'shish:
+        Misol:
+        thislist = ["apple", "banana", "cherry"]
+        tropical = ["mango", "pineapple", "papaya"]
+        thislist.extend(tropical)
+        print(thislist)
+        Elementlar ro'yxatning oxiriga qo'shiladi .
+
+  Python - Ro'yxat elementlarini o'chirish
+
+      Belgilangan elementni olib tashlang
+        Usul remove()belgilangan elementni olib tashlaydi.
+        "banana" ni olib tashlang:
+        Misol:
+        thislist = ["apple", "banana", "cherry"]
+        thislist.remove("banana")
+        print(thislist)
+
+      Belgilangan indeksni olib tashlang
+        Usul pop() belgilangan indeksni olib tashlaydi.
+        Ikkinchi elementni olib tashlang:
+        Misol:
+        thislist = ["apple", "banana", "cherry"]
+        thislist.pop(1)
+        print(thislist)
+
+      Agar siz indeksni ko'rsatmasangiz, pop() usul oxirgi elementni olib tashlaydi.
+        Oxirgi elementni olib tashlang:
+        Misol:
+        thislist = ["apple", "banana", "cherry"]
+        thislist.pop()
+        print(thislist)
+
+      Kalit del so'z belgilangan indeksni ham olib tashlaydi:
+        Birinchi elementni olib tashlang:
+        Misol:
+        thislist = ["apple", "banana", "cherry"]
+        del thislist[0]
+        print(thislist)
+
+      Kalit delso'z ham ro'yxatni butunlay o'chirib tashlashi mumkin.
+        To'liq ro'yxatni o'chirish:
+        Misol:
+        thislist = ["apple", "banana", "cherry"]
+        del thislist
+
+      Roʻyxatni tozalang
+        Usul clear()ro'yxatni bo'shatadi.
+        Ro'yxat hali ham saqlanib qolmoqda, ammo uning mazmuni yo'q.
+        Ro'yxat tarkibini tozalang:
+        Misol: 
+        thislist = ["apple", "banana", "cherry"]
+        thislist.clear()
+        print(thislist)
+
+      Roʻyxatni nusxalash
+      Siz roʻyxatni oddiygina terish orqali nusxa koʻchira olmaysiz list2 = list1, chunki: faqat ga havolalist2 boʻladi va
+      kiritilgan oʻzgartirishlar avtomatik ravishda ichida ham amalga oshiriladi .list1list1list2
+      Nusxa olish usullari mavjud, ulardan biri o'rnatilgan List usulidan foydalanishdir copy().
+
+      Usul bilan ro'yxatning nusxasini yarating copy():
+        Misol:
+        thislist = ["apple", "banana", "cherry"]
+        mylist = thislist.copy()
+        print(mylist)
+
+✅ listt = list(range(1, 10))
+    Python - Loop ro'yxatlar
+      Roʻyxat boʻyicha aylanish
+        Loop yordamida roʻyxat elementlarini aylanib chiqishingiz mumkin for :
+        Roʻyxatdagi barcha elementlarni birma-bir chop eting:
+        Misol: 
+        thislist = ["apple", "banana", "cherry"]
+        for x in thislist:
+          print(x)
+  
+      Indeks raqamlari bo'ylab aylanish
+        Siz shuningdek, indeks raqamiga murojaat qilib, ro'yxat elementlarini aylanib chiqishingiz mumkin.
+        Tegishli takrorlanuvchini yaratish uchun range() va funksiyalaridan foydalaning .len()
+        Barcha elementlarni indeks raqamiga qarab chop eting:
+        Misol: 
+        thislist = ["apple", "banana", "cherry"]
+        for i in range(len(thislist)):
+          print(thislist[i])
+
+      While siklidan foydalanish
+        Loop yordamida ro'yxat elementlarini aylanib chiqishingiz mumkin while.
+        len()Roʻyxat uzunligini aniqlash uchun funksiyadan foydalaning , soʻngra 0 dan boshlang va 
+        ularning indekslariga murojaat qilib, roʻyxat elementlari boʻylab aylanib chiqing.
+        Har bir iteratsiyadan keyin indeksni 1 ga oshirishni unutmang.
+      
+        while Barcha indeks raqamlarini o'tish uchun tsikldan foydalanib, barcha elementlarni chop eting
+        Misol: 
+        thislist = ["apple", "banana", "cherry"]
+        i = 0
+        while i < len(thislist):
+          print(thislist[i])
+          i = i + 1
+
+      Ro'yxatni tushunish yordamida aylanish
+        Ro'yxatni tushunish ro'yxatlar bo'ylab aylanish uchun eng qisqa sintaksisni taklif qiladi:
+        for Ro'yxatdagi barcha elementlarni chop etadigan qisqa qo'l tsikli:
+        Misol: 
+        thislist = ["apple", "banana", "cherry"]
+        [print(x) for x in thislist]
+      
+      Ro'yxatni tushunish
+        Mavjud roʻyxat qiymatlari asosida yangi roʻyxat yaratmoqchi boʻlganingizda roʻyxatni tushunish qisqaroq sintaksisni taklif qiladi.
+        Misol:
+        Mevalar ro'yxatiga asoslanib, siz faqat "a" harfi bo'lgan mevalarni o'z ichiga olgan yangi ro'yxatni xohlaysiz.
+        for Ro'yxatni tushunmasdan , ichida shartli test bilan bayonot yozishingiz kerak bo'ladi :
+        Misol: 
+        fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+        newlist = []
+        for x in fruits:
+          if "a" in x:
+            newlist.append(x)
+        print(newlist)
+
+✅ sort(), reverse()
+    Python - ro'yxatlarni tartiblash
+    Ro'yxatni alfanumerik tartibda tartiblash
+      Ro'yxat ob'ektlarida sort()ro'yxatni sukut bo'yicha alfanumerik, o'sish bo'yicha tartiblash usuli mavjud:
+      Ro'yxatni alifbo tartibida tartiblang:
+      Misol:
+      thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+      thislist.sort()
+      print(thislist)
+
+    Ro'yxatni raqamlar bo'yicha tartiblang:
+      Misol:
+      thislist = [100, 50, 65, 82, 23]
+      thislist.sort()
+      print(thislist)
+
+    Kamayish bo'yicha tartiblash
+      Kamaytirish bo'yicha tartiblash uchun argument kalit so'zidan foydalaning reverse = True:
+      Ro'yxatni kamayishiga qarab tartiblang:
+      Misol:
+      thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+      thislist.sort(reverse = True)
+      print(thislist)
+
+    Ro'yxatni kamayishiga qarab tartiblang:
+      Misol:
+      thislist = [100, 50, 65, 82, 23]
+      thislist.sort(reverse = True)
+      print(thislist)
+✅ list ichida qidirilayotgan ma'lumot bor yoki yo'qligini tekshirish("qidirilayotgan ma'lumot" in (list nomi))

@@ -1,0 +1,2 @@
+2.0-dars Dunder metodlar 
+    ✅ __add__(self, other), __sub__(self, other), __pow__(self, power, module=None)->(**)

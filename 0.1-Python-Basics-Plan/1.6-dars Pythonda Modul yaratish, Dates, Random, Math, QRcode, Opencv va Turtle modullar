@@ -1,0 +1,198 @@
+1.6-dars Pythonda Modul yaratish, Dates, Random, Math, QRcode, Opencv va Turtle modullar
+    
+✅ Modul yaratish
+        def talaba_info(ism, familiya, yil, manzil):
+            """Talaba haqidagi ma'lumotlarni lug'at ko'rinishida qaytaruvchi funksiya"""
+            talaba = {'ism': ism,
+                      'familiya': familiya,
+                      'yil': yil,
+                      'manzil': manzil,
+                      }
+            return talaba
+        
+        
+        def talaba_kirit():
+            """Foydalanuvchiga talaba_info funksiyasi yordamida bir nechta talabalar haqida ma'lumotlarni bitta ro'yxatga joylash imkonini beruvchi funksiya"""
+            talabalar = []  # guruxdagi talabalar uchun bo'sh ro'yxat
+            while True:
+                print("\nQuyidagi ma'lumotlarni kiriting", end='')
+                ism = input("Ism: ")
+                familiya = input("Familiya: ")
+                yil = input("Yil: ")
+                manzil = input("Manzil: ")
+                # Foydalanuvchi kiritdan ma'lumotlardan talaba_info yordamida
+                # lug'at shakllantirib, har bir lug'atni ro'yxatga qo'shamiz:
+                talabalar.append(talaba_info(ism, familiya, yil, manzil))
+                # Yana talaba qo'shish-qo'shmaslikni so'raymiz
+                javob = input("Yana talaba qo'shasizmi? (yes/no): ")
+                if javob == 'no':
+                    break
+            return talabalar
+        
+        
+        def info_print(talaba_info):
+            """Talabalar haqida ma'lumotlar saqlangan lug'atni konsolga chiqaruvchi funksiya"""
+            print(f"Ismi: {talaba_info['ism'].title()}\nFamiliyasi: {talaba_info['familiya'].upper()}\n"
+                  f"Tug'ilgan yili: {talaba_info['yil']}\nYashash manzili: {talaba_info['manzil'].title()}\n")
+
+
+
+        ------------------------
+        
+        # import talaba_moduli  # modul faylini chaqiramiz
+        #
+        # talaba1 = talaba_moduli.talaba_info("Rustam", "Isroilov", 2000, "Farg'ona")
+        # talaba_moduli.info_print(talaba1)
+        
+        # from talaba_moduli import talaba_info, info_print
+        #
+        # talaba1 = talaba_info("Rustam", "Isroilov", 2000, "Farg'ona")
+        # info_print(talaba1)
+        
+        # from talaba_moduli import *
+        #
+        # talaba1 = talaba_info("Rustam", "Isroilov", 2000, "Farg'ona")
+        # info_print(talaba1)
+        
+     
+        # import talaba_moduli
+        #
+        # talabalar = talaba_moduli.talaba_kirit()
+        # for talaba in talabalar:
+        #     talaba_moduli.info_print(talaba)
+✅ Datatime moduli, datetime.datetime.now(), date(), time(), hour, microsecond, minute, second  
+    import datetime
+        sana = datetime.datetime.now()
+        print(sana)
+        print(sana.year)
+        print(sana.month)
+        print(sana.day)
+        print(sana.hour)
+        print(sana.strftime("%A"))
+   # https://www.w3schools.com/python/python_datetime.asp
+✅ Random moduli, randint, choice, shuffle
+   import random  # random modulini chaqirayapmiz
+        # randint(a,b)
+        # Bu funksiya a va b oraligi'da tasodifiy butun son qaytaradi.
+        
+        son = random.randint(0,100) # 0 va 100 oralig'ida tasodifiy son
+        print(son)
+        
+        
+        # choice(x)
+        # x ning ichidan tasodifiy qiymatni qaytaruvchi funksiya.
+        # Bunda x bir necha elementdan iborat o'zgaruvchi (matn, ro'yxat) bo'lishi kerak.
+        
+        ismlar = ['ali', 'valijon', 'hasan', 'husan']
+        ism = random.choice(ismlar)  # ismlar dan tasodifiy ism tanlaymiz
+        print(ism)
+        print(random.choice(ism)) # ismdan tasodifiy harf tanlaymiz
+        
+        
+        x = list(range(0,51,5))
+        print(x)
+        print(random.choice(x))
+        
+        
+        # shuffle(x)
+        # x ichidagi elementlarni tasodifiy tartibda qaytaruvchi funksiya.
+        # Bunda x bir necha elementdan iborat o'zgaruvchi (matn, ro'yxat) bo'lishi kerak.
+        
+        x = list(range(9))
+        print(x)
+        random.shuffle(x)
+        print(x)
+✅ Math moduli, sqrt(), ceil(), floor(), pi, sin(), cos()
+    # https://docs.python.org/3/library/math.html
+    import math
+        PI = math.pi
+        print(f"PI ning qiymati: {PI}")
+        
+        E = math.e
+        print(f"e ning qiymati: {E}")
+        Natija: e ning qiymati: 2.718281828459045
+        
+        math.sin(math.pi/2)
+        math.cos(0)
+        math.tan(PI)
+        
+        # natural logarifm
+        math.log(5)
+        # 10 asosli logarifm
+        math.log10(100)
+        
+        x = 4.6
+        print(math.ceil(x))
+        print(math.floor(x))
+        
+        x = 81
+        
+        # Kvadrat ildiz
+        math.sqrt(x)
+        
+        # Darajaga oshirish
+        math.pow(x,3) # x ning kubi
+        math.pow(x,5) # x ning 5-darajasi
+        math.pow(x,1/3) # x dan kub ildiz
+✅ QRcode
+    # pip install qrcode
+    import qrcode
+        data = 'https://github.com/isroilovrustam'
+        img = qrcode.make(data)
+        print(img)
+        # print(img)
+        img.save('kutubxona.png')
+✅ Opencv
+    # pip install opencv-python
+    import cv2
+        cap = cv2.VideoCapture(0)
+        face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+        eye_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_eye.xml')
+        
+        while True:
+            ret, frame = cap.read()
+        
+            gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+            faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+            for (x, y, w, h) in faces:
+                cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 5)
+                roi_gray = gray[y:y+w, x:x+w]
+                roi_color = frame[y:y+h, x:x+w]
+                eyes = eye_cascade.detectMultiScale(roi_gray, 1.3, 5)
+                for (ex, ey, ew, eh) in eyes:
+                    cv2.rectangle(roi_color, (ex, ey), (ex + ew, ey + eh), (0, 255, 0), 5)
+        
+            cv2.imshow('frame', frame)
+        
+            if cv2.waitKey(1) == ord('q'):
+                break
+        
+        cap.release()
+        cv2.destroyAllWindows()
+        
+        # copyright Tim Ruscia aka techwithtim
+        # code from https://github.com/techwithtim/OpenCV-Tutorials
+✅ Turtle
+    import turtle
+        def draw_square(some_turtle):
+            for i in range(1, 5):
+                some_turtle.forward(200)
+                some_turtle.right(90)
+        def draw_art():
+            window = turtle.Screen()
+            window.bgcolor("black")
+            brad = turtle.Turtle()
+            brad.shape("turtle")
+            brad.color("yellow")
+            brad.speed(4)
+            brad.pensize(2)
+            for i in range(1, 37):
+                draw_square(brad)
+                brad.right(10)
+            # Turtle Angie
+            window.exitonclicko()
+        
+        
+        draw_art()
+        turtle.heading()
+    # https://yandex.uz/images/search?from=tabbar&text=python%20turtle

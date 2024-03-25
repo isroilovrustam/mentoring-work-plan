@@ -1,0 +1,16 @@
+3.0-dars EXAM
+
+1. Car nomli klass yarating uning modeli, nomi, narxi, km va rangili xususiyatlari bo'lsin va undan obyektlar oling olingan
+    olingan obyektlarning narxiga qarab konsulga chiqaruvchi kod yozing.
+
+2. Talaba degan klass yarating uning ism, familiyasi va 3 ta fandan olgan baholarini hisoblang va o'rtacha baxosini toping 
+   eng yuqori bal to'plagan boladan boshlab 3 ta o'rini aniqlang?
+
+3. Bir son kiriting va kiritilgan soni raqamlari yig'indisini Teskarisini chiqaruvchi dastur tuzing?
+
+4. OOP ning 4 ta tamoyili va Modul qatnashgan misol tuzing?
+
+5. 0 kiritilguncha integer tipida sonlar kiriting. 0 kiritilsa son kiritish to'xtasin va kiritilgan sonlarning yig'indisini toping.
+   Topilgan yig'indi juft yoki toqligini ekrangga chiqaring.
+
+6. OOP, Class, Obyekt, INKAPSULYATSIYA, ABSTRAKTSIYA, VORISLIK, POLIMORFIZM, nima ekanligi haqida qisqa, aniq va tushunarlik javob bering.
