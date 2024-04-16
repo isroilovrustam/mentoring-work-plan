@@ -23,6 +23,59 @@ Beckend-Django.
     ✅ Loyihani admin qismi bilan ishlash
     ✅ Queryset va model manager
     ✅ News list va detail page
+    ✅ Template va static fayllar bilan ishlash
+    ✅ Yangiliklar sayti shablonini Djangoga o'rnatish
+    ✅ Home va Contact sahifalarini ishga tushurish
+    ✅ Forma bilan ishlash. Contact form
+    ✅ Class bilan form view ni yaratish
+    ✅ ModelForm vs Form
+    ✅ Bosh sahifa yangiliklarini kategotiya bo'yicha ko'rsatish
+    ✅ Context_processor va get_context_data
+    ✅ Template teglari. Loyihani to'ldirish
+    ✅ URLni slug ga o'zgartirish. Get_absolute url
+    ✅ Yangiliklar sayt sahifalarini yaratish
+    ✅ Git. Loyihani githubga yuklash
+    ✅ Yangiliklarni tahrirlash va o'chirish funksiyalari
+    ✅ Saytga yangilik qo'shish. CreateView
+    ✅ Login va logout
+    ✅ Foydalanuvchi Profilini yaratish
+    ✅ Foydalanuvchi parolini qayta tiklash
+    ✅ Signup. Ro'yxatdan o'tish
+    ✅ Signup. Class View orqali ro'yxatdan o'tish
+    ✅ Profile modelini yaratish. Profilni tahrirlash
+    ✅ Login_required dekoratori va LoginRequiredMixin
+    ✅ Profilda rasm va boshqa ma'lumotlarni chiqarish
+    ✅ Ruxsatnomalar. LoginRequiredMixin vs UserPassesTestMixin
+    ✅ Ruxsatnomalar. Admin sahifasi ochish. Dekaratorli ruxsatnomalar
+    ✅ Djangoda izoh qoldirish. Izoh modeli va formasini yaratish
+    ✅ Djangoda izoh qoldirish. View qismini yozamiz
+    ✅ Djangoda izoh qoldirish. Template qismini yozamiz
+    ✅ Yangiliklarni izlash funksiyasi
+    ✅ Ko'rishlar sonini aniqlash
+    ✅ Ko'rishlar sonini templateda aks etirish
+    ✅ Izohlar sonini templateda chiqarish va githubga o'zgarishlarni saqlash
+    ✅ Vebsaytni i18n orqali tarjima qilish
+    ✅ ModelTranslation modulidan foydalanib modelni tarjima qilish
+    ✅ Template dagi matnlarni tarjima qilish
+    ✅ Deployment. Ahost serveriga joylash
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 3 Templates, HTML
     ✅ Template papka yaratish, settings ga sozlash 
     ✅ Static papka bilan ishlash(img, css, js)
