@@ -25,7 +25,7 @@
     pwd -> terminalda qayerda turganingizni ko'rsatadi.
     cd .. -> terminalda turgan joytimizdan bir pog'ona yuqoriga chiqadi.
     cd (papka_nomi)/ -> kiritilgan papka ichiga kiradi.
-    ls -> terminal turgan joytingizdagi fayllar va papkalarni ko'rsatadi.
+    ls (Windows dir) -> terminal turgan joytingizdagi fayllar va papkalarni ko'rsatadi.
     mkdir (papka_nomi) -> terminal orqali papka yaratish uchun ishlatilinadi.
     rmdir (papka_nomi) -> terminal orqali papka o'chirish uchun ishlatilinadi.
 
