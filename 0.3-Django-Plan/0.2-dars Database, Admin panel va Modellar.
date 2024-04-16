@@ -1,11 +1,11 @@
 0.2-dars Database, Admin panel va Modellar.
 
 ✅ Makemigrations va migrate.
-python manage.py makemigrations
+* python manage.py makemigrations
 Makemigrations -> Djangoga modellaringizga ba'zi o'zgarishlar kiritganingizni (bu holda siz yangilarini kiritgansiz) 
 va o'zgarishlar migratsiya sifatida saqlanishini xohlayotganingizni aytasiz .
 
-python manage.py migrate
+* python manage.py migrate
 Migratsiya - bu Django sizning modellaringizdagi o'zgarishlarni (va shuning uchun ma'lumotlar bazasi sxemasini) 
 qanday saqlaydi - ular diskdagi fayllar. Agar xohlasangiz, yangi modelingiz uchun migratsiyani o'qishingiz mumkin
 
