@@ -1,66 +1,87 @@
 0.1-dars Django bilan tanishuv. Djangoni o'rnatish va sozlash
 
+✅ DJANGO bu bepul va opensors bo’lgan python dasturlash tili asosida qurilgan hamda
+    MTV (Model  Tempelate View) arxitekturaviy ko’rinishga asoslangan web framework hisoblanadi.
+
+✅ FRAMEWORK bu birorbir darturlash tili asosida qurilgan bo’lib loyiha qurishda yordam berish 
+    kodlarni standartlashtirish va biz doyimiy ishlatib keladigon kodlar qisimlarini qayta qayta
+    yozmaslik uchun ma’lum bir qoliblarga solish uchun ishlatilinadi ya’ni framework dasturchi uchun
+    tayor qolib va yordamchi desak ham bo’ladi django ham hudi shunday framworklarning bitasi hisoblanadi
+
+✅ Nima uchun Django!
+    ﻿﻿• Tez - g'oyadan dasturgacha bir qadam
+    ﻿﻿• Fullstack - Ya'ni Web dasturlarni 0 dan boshlab to'liqligicha bitta frameworkda yaratiladi
+    • ﻿﻿Ko'p qirrali - Daingo yordamida istalgan turdagi va murakkablikdagi Web dasturlarni yaratish mumkin.
+        Django boshqa web frameworklar va texnologiyalar bilan muammosiz ishlaydi
+    • Xavfsiz - Django Web dastur foydalanuvchilarining xavfsizligini 
+        ta'minlash uchun barcha kerakli vositalarbilan qurollangan
+    • Oson kengayuvchi - Xoh kichik xoh katta bo'lsin, Django asosida yaratilgan dasturlar 
+        osonlik bilan millionlab foydalanuvchilarga xizmat ko'rsata oladi
+    • Barcha turdagi serverlarda ishlaydi
+    • Xizmat ko'rsatish oson|
+
+
 ✅ Initial CMD commands.
-pwd -> terminalda qayerda turganingizni ko'rsatadi.
-cd .. -> terminalda turgan joytimizdan bir pog'ona yuqoriga chiqadi.
-cd (papka_nomi)/ -> kiritilgan papka ichiga kiradi.
-ls -> terminal turgan joytingizdagi fayllar va papkalarni ko'rsatadi.
-mkdir (papka_nomi) -> terminal orqali papka yaratish uchun ishlatilinadi.
-rmdir (papka_nomi) -> terminal orqali papka o'chirish uchun ishlatilinadi.
+    pwd -> terminalda qayerda turganingizni ko'rsatadi.
+    cd .. -> terminalda turgan joytimizdan bir pog'ona yuqoriga chiqadi.
+    cd (papka_nomi)/ -> kiritilgan papka ichiga kiradi.
+    ls -> terminal turgan joytingizdagi fayllar va papkalarni ko'rsatadi.
+    mkdir (papka_nomi) -> terminal orqali papka yaratish uchun ishlatilinadi.
+    rmdir (papka_nomi) -> terminal orqali papka o'chirish uchun ishlatilinadi.
 
 ✅ Proyekt yaratish, venv.
-python3 -m venv venv -> muhit o'rnatadi.
-source venv/bin/activate (Windows -> venv\Scripts\activate) -> muhitni aktivatsiya qiladi.
-pip3 install django -> Django ni o'rnatadi.
-pip3 install Pillow -> Pillow ni o'rnatadi (Python Imaging Library Python tarjimoningizga tasvirni qayta ishlash imkoniyatlarini qo'shadi.)
-pip3 freeze > requarments.txt -> txt file ochadi va o'rnatilgan kutubxonalar royxatini saqlaydi.
-django-admin startproject config . -> Config nomli yangi proyekt ochadi.
-django-admin startapp -> Yangi app yaratadi.
+    python3 -m venv venv -> muhit o'rnatadi.
+    source venv/bin/activate (Windows -> venv\Scripts\activate) -> muhitni aktivatsiya qiladi.
+    pip3 install django -> Django ni o'rnatadi.
+    pip3 install Pillow -> Pillow ni o'rnatadi (Python Imaging Library Python tarjimoningizga tasvirni qayta ishlash imkoniyatlarini qo'shadi.)
+    pip3 freeze > requarments.txt -> txt file ochadi va o'rnatilgan kutubxonalar royxatini saqlaydi.
+    django-admin startproject config . -> Config nomli yangi proyekt ochadi.
+    django-admin startapp -> Yangi app yaratadi.
 
 ✅ Config
-config/ildiz katalogi loyihangiz uchun konteynerdir. Django uchun uning nomi muhim emas; 
-uni xohlagan narsangizga o'zgartirishingiz mumkin.
-
-manage.py -> Bu Django loyihasi bilan turli usullarda ishlashga imkon beruvchi buyruq qatori yordam dasturi. 
-Siz barcha tafsilotlarni django-admin va manage.pymanage.py da o'qishingiz mumkin .
-
-__init__.py -> Python-ga ushbu katalogni Python paketi deb hisoblash kerakligini aytadigan bo'sh fayl.
-Agar siz Python-ni boshlovchi bo'lsangiz, rasmiy Python hujjatlarida paketlar haqida ko'proq o'qing.
-
-settings.py -> Ushbu Django loyihasi uchun sozlamalar/konfiguratsiya. 
-Django sozlamalari sozlamalar qanday ishlashi haqida sizga hamma narsani aytib beradi.
-
-urls.py -> Ushbu Django loyihasi uchun URL deklaratsiyalari; Django tomonidan boshqariladigan saytingizning "tarkiblari".
-URL manzillari haqida ko'proq URL dispetcherida o'qishingiz mumkin .
-
-asgi.py -> Loyihangizga xizmat qilish uchun ASGI-mos veb-serverlar uchun kirish nuqtasi. 
-
-wsgi.py -> Loyihangizga xizmat ko'rsatish uchun WSGI-mos veb-serverlar uchun kirish nuqtasi. 
+    config/ildiz katalogi loyihangiz uchun konteynerdir. Django uchun uning nomi muhim emas; 
+    uni xohlagan narsangizga o'zgartirishingiz mumkin.
+    
+    manage.py -> Bu Django loyihasi bilan turli usullarda ishlashga imkon beruvchi buyruq qatori yordam dasturi. 
+    Siz barcha tafsilotlarni django-admin va manage.pymanage.py da o'qishingiz mumkin .
+    
+    __init__.py -> Python-ga ushbu katalogni Python paketi deb hisoblash kerakligini aytadigan bo'sh fayl.
+    Agar siz Python-ni boshlovchi bo'lsangiz, rasmiy Python hujjatlarida paketlar haqida ko'proq o'qing.
+    
+    settings.py -> Ushbu Django loyihasi uchun sozlamalar/konfiguratsiya. 
+    Django sozlamalari sozlamalar qanday ishlashi haqida sizga hamma narsani aytib beradi.
+    
+    urls.py -> Ushbu Django loyihasi uchun URL deklaratsiyalari; Django tomonidan boshqariladigan saytingizning "tarkiblari".
+    URL manzillari haqida ko'proq URL dispetcherida o'qishingiz mumkin .
+    
+    asgi.py -> Loyihangizga xizmat qilish uchun ASGI-mos veb-serverlar uchun kirish nuqtasi. 
+    
+    wsgi.py -> Loyihangizga xizmat ko'rsatish uchun WSGI-mos veb-serverlar uchun kirish nuqtasi. 
 
 ✅ Config urls
-urls -> Dastur ichidagi url manzillar to'plami.
-
-from django.contrib import admin
-from django.urls import include, path
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include(app_1.urls))
-]
+    urls -> Dastur ichidagi url manzillar to'plami.
+    
+    from django.contrib import admin
+    from django.urls import include, path
+    
+    urlpatterns = [
+        path('admin/', admin.site.urls),
+        path('', include(app_1.urls))
+    ]
 
 ✅ app, urls, view
-App urls
+    App urls
+    
+    from django.urls import path
+    from views import index
+    
+    urlpatterns = [
+        path("", index, name="index"),
+    ]
+    
+    View
 
-from django.urls import path
-from views import index
-
-urlpatterns = [
-    path("", index, name="index"),
-]
-
-View
-
-from django.http import HttpResponse
-
-def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    from django.http import HttpResponse
+    
+    def index(request):
+        return HttpResponse("Hello, world. You're at the polls index.")
