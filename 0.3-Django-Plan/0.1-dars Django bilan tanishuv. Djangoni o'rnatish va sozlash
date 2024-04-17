@@ -33,7 +33,6 @@
     python3 -m venv venv -> muhit o'rnatadi.
     source venv/bin/activate (Windows -> venv\Scripts\activate) -> muhitni aktivatsiya qiladi.
     pip3 install django -> Django ni o'rnatadi.
-    pip3 install Pillow -> Pillow ni o'rnatadi (Python Imaging Library Python tarjimoningizga tasvirni qayta ishlash imkoniyatlarini qo'shadi.)
     pip3 freeze > requarments.txt -> txt file ochadi va o'rnatilgan kutubxonalar royxatini saqlaydi.
     django-admin startproject config . -> Config nomli yangi proyekt ochadi.
     django-admin startapp -> Yangi app yaratadi.
