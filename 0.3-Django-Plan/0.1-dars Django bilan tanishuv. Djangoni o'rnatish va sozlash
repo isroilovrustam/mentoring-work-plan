@@ -1,14 +1,15 @@
 0.1-dars Django bilan tanishuv. Djangoni o'rnatish va sozlash
 
-✅ DJANGO bu bepul va opensors bo’lgan python dasturlash tili asosida qurilgan hamda
+✅ Django nima?
+    DJANGO bu bepul va opensors bo’lgan python dasturlash tili asosida qurilgan hamda
     MTV (Model  Tempelate View) arxitekturaviy ko’rinishga asoslangan web framework hisoblanadi.
 
-✅ FRAMEWORK bu birorbir darturlash tili asosida qurilgan bo’lib loyiha qurishda yordam berish 
+    FRAMEWORK bu birorbir darturlash tili asosida qurilgan bo’lib loyiha qurishda yordam berish 
     kodlarni standartlashtirish va biz doyimiy ishlatib keladigon kodlar qisimlarini qayta qayta
     yozmaslik uchun ma’lum bir qoliblarga solish uchun ishlatilinadi ya’ni framework dasturchi uchun
     tayor qolib va yordamchi desak ham bo’ladi django ham hudi shunday framworklarning bitasi hisoblanadi
 
-✅ Nima uchun Django!
+    Nima uchun Django!
     ﻿﻿* Tez - g'oyadan dasturgacha bir qadam
     ﻿﻿* Fullstack - Ya'ni Web dasturlarni 0 dan boshlab to'liqligicha bitta frameworkda yaratiladi
     * ﻿﻿Ko'p qirrali - Daingo yordamida istalgan turdagi va murakkablikdagi Web dasturlarni yaratish mumkin.
@@ -20,8 +21,9 @@
     * Barcha turdagi serverlarda ishlaydi
     * Xizmat ko'rsatish oson|
 
+✅ Django arxitekturasi va ishlash tamoyili (google search)
 
-✅ Initial CMD commands.
+✅ Terminal va CMD commands..
     pwd -> terminalda qayerda turganingizni ko'rsatadi.
     cd .. -> terminalda turgan joytimizdan bir pog'ona yuqoriga chiqadi.
     cd (papka_nomi)/ -> kiritilgan papka ichiga kiradi.
@@ -29,7 +31,9 @@
     mkdir (papka_nomi) -> terminal orqali papka yaratish uchun ishlatilinadi.
     rmdir (papka_nomi) -> terminal orqali papka o'chirish uchun ishlatilinadi.
 
-✅ Proyekt yaratish, venv.
+✅ Vertual muhit (venv) bilan tanishish.
+
+✅ Blog loyihasini ishga tushurish.
     python3 -m venv venv -> muhit o'rnatadi.
     source venv/bin/activate (Windows -> venv\Scripts\activate) -> muhitni aktivatsiya qiladi.
     pip3 install django -> Django ni o'rnatadi.
@@ -37,7 +41,8 @@
     django-admin startproject config . -> Config nomli yangi proyekt ochadi.
     django-admin startapp -> Yangi app yaratadi.
 
-✅ Config
+✅ Django qismlari bilan tanishish(Config, settings, urls).
+  Config
     config/ildiz katalogi loyihangiz uchun konteynerdir. Django uchun uning nomi muhim emas; 
     uni xohlagan narsangizga o'zgartirishingiz mumkin.
     
@@ -57,7 +62,8 @@
     
     wsgi.py -> Loyihangizga xizmat ko'rsatish uchun WSGI-mos veb-serverlar uchun kirish nuqtasi. 
 
-✅ Config urls
+✅ Hello World
+   Config urls
     urls -> Dastur ichidagi url manzillar to'plami.
     
     from django.contrib import admin
@@ -68,9 +74,7 @@
         path('', include(app_1.urls))
     ]
 
-✅ app, urls, view
-    App urls
-    
+  App urls
     from django.urls import path
     from views import index
     
@@ -78,8 +82,7 @@
         path("", index, name="index"),
     ]
     
-    View
-
+  View
     from django.http import HttpResponse
     
     def index(request):
