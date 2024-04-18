@@ -30,12 +30,12 @@ Beckend-Django.
 6 Shablondan foydalanish
     ✅ Yangiliklar sayti shablonini Djangoga o'rnatish
     ✅ Home va Contact sahifalarini ishga tushurish
-
+7 Contact bilan ishlash 
     ✅ Forma bilan ishlash. Contact form
     ✅ Class bilan form view ni yaratish
     ✅ ModelForm vs Form
-    ✅ Bosh sahifa yangiliklarini kategotiya bo'yicha ko'rsatish
 
+    ✅ Bosh sahifa yangiliklarini kategotiya bo'yicha ko'rsatish
     ✅ Context_processor va get_context_data
     ✅ Template teglari. Loyihani to'ldirish
     ✅ URLni slug ga o'zgartirish. Get_absolute url
