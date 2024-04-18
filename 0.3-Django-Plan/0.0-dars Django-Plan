@@ -20,8 +20,10 @@ Beckend-Django.
     ✅ Database dizayinini yaratish. Drawsql.app
     ✅ Loyiha modelini tuzish
     ✅ Loyihani admin qismi bilan ishlash
-
-    ✅ Queryset va model manager
+4 QuerySet (ORM)
+    ✅ Queryset ga kirish va model manager
+    ✅ QuerySet olish
+    ✅ QuerySet filter
     ✅ News list va detail page
 
     ✅ Template va static fayllar bilan ishlash
