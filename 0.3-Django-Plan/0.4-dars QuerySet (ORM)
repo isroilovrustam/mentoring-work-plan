@@ -1,0 +1,5 @@
+4 QuerySet (ORM)
+    ✅ Queryset ga kirish va model manager
+    ✅ QuerySet olish
+    ✅ QuerySet filter
+    ✅ News list va detail page
