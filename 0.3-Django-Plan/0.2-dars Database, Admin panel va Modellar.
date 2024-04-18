@@ -1,80 +1,69 @@
 0.2-dars Blog loyihasi. APP nima?, Model va Admin panel.
-    ✅ App, urls, views
-    ✅ Modellar nima ekanligini tushunish
-    ✅ Model yaratish.
-    ✅ Makemigrations va migrate.
-    ✅ Admin panel, createsuperuser (https://docs.djangoproject.com/en/4.2/ref/contrib/admin/)
-    ✅ Views va templates lar bilan ishlash.
-    ✅ Blog Detail.
+    
 ✅ Makemigrations va migrate.
-* python manage.py makemigrations
-Makemigrations -> Djangoga modellaringizga ba'zi o'zgarishlar kiritganingizni (bu holda siz yangilarini kiritgansiz) 
-va o'zgarishlar migratsiya sifatida saqlanishini xohlayotganingizni aytasiz .
-
-* python manage.py migrate
-Migratsiya - bu Django sizning modellaringizdagi o'zgarishlarni (va shuning uchun ma'lumotlar bazasi sxemasini) 
-qanday saqlaydi - ular diskdagi fayllar. Agar xohlasangiz, yangi modelingiz uchun migratsiyani o'qishingiz mumkin
+    * python manage.py makemigrations
+      Makemigrations -> Djangoga modellaringizga ba'zi o'zgarishlar kiritganingizni (bu holda siz yangilarini kiritgansiz) 
+      va o'zgarishlar migratsiya sifatida saqlanishini xohlayotganingizni aytasiz .
+    
+    * python manage.py migrate
+      Migratsiya - bu Django sizning modellaringizdagi o'zgarishlarni (va shuning uchun ma'lumotlar bazasi sxemasini) 
+      qanday saqlaydi - ular diskdagi fayllar. Agar xohlasangiz, yangi modelingiz uchun migratsiyani o'qishingiz mumkin
 
 ✅ Modellar nima ekanligini tushunish
-Model ma'lumotlaringiz haqidagi yagona, aniq ma'lumot manbaidir.
-U siz saqlayotgan ma'lumotlarning muhim maydonlari va xatti-harakatlarini o'z ichiga oladi.
+    Model ma'lumotlaringiz haqidagi yagona, aniq ma'lumot manbaidir.
+    U siz saqlayotgan ma'lumotlarning muhim maydonlari va xatti-harakatlarini o'z ichiga oladi.
 
-✅ Model yaratish (Kutubxona -> Category, Book modellar)
-from django.db import models
-from django.contrib.auth.models import User
+✅ Model yaratish (Book model)
+    from django.db import models
+    from django.contrib.auth.models import User
+    Book modeli
+    class Book(models.Model):
+        title = models.CharField(max_length=202)
+        author = models.ForeignKey(User, on_delete=models.CASCADE)
+        category = models.ForeignKey(Category, on_delete=models.CASCADE)
+        
+        def __str__(self):
+            return self.title
 
-Category modeli
-
-class Category(models.Model):
-    title = models.CharField(max_length=202)
-
-Book modeli
-
-class Book(models.Model):
-    title = models.CharField(max_length=202)
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    admin.py ->
     
-    def __str__(self):
-        return self.title
-
-admin.py ->
-
-from django.contrib import admin
-from .models import Book, Category
-
-admin.site.register(Category)
-
-@admin.register(Book)
-class BookAdmin(admin.ModelAdmin):
-    list_display = ('title', 'author', 'category')
-    list_filter = ('author', 'category')
-    search_fields = ('title', )
+    from django.contrib import admin
+    from .models import Book, Category
+    
+    admin.site.register(Category)
+    
+    @admin.register(Book)
+    class BookAdmin(admin.ModelAdmin):
+        list_display = ('title', 'author', 'category')
+        list_filter = ('author', 'category')
+        search_fields = ('title', )
 
 ✅ Admin panel, createsuperuser(https://docs.djangoproject.com/en/4.2/ref/contrib/admin/)
-Django-ning eng kuchli qismlaridan biri bu avtomatik boshqaruv interfeysi.
-U ishonchli foydalanuvchilar saytingizdagi kontentni boshqarishi mumkin bo'lgan tezkor, 
-modelga asoslangan interfeysni ta'minlash uchun modellaringizdagi metama'lumotlarni o'qiydi.
+    Django-ning eng kuchli qismlaridan biri bu avtomatik boshqaruv interfeysi.
+    U ishonchli foydalanuvchilar saytingizdagi kontentni boshqarishi mumkin bo'lgan tezkor, 
+    modelga asoslangan interfeysni ta'minlash uchun modellaringizdagi metama'lumotlarni o'qiydi.
+    
+    python manage.py createsuperuser
+    Agar siz tizimga kirish uchun foydalanuvchi yaratishingiz kerak bo'lsa, createsuperuser buyruqdan foydalaning. 
+    Odatiy bo'lib, administratorga kirish uchun foydalanuvchi atributiga ega bo'lishini talab is_staff True.
+    
+    Nihoyat, administrator interfeysida ilovangizning qaysi modellari tahrirlanishi kerakligini aniqlang.
+    Ushbu modellarning har biri uchun ularni administratorda tavsiflanganidek ro'yxatdan o'tkazing.
+    
+    Sinf ModelAdmin administrator interfeysidagi modelning ko'rinishidir. admin.py Odatda, ular ilovangizda nomlangan faylda saqlanadi.
+    
+    from django.contrib import admin
+    from myapp.models import Author
 
-python manage.py createsuperuser
-Agar siz tizimga kirish uchun foydalanuvchi yaratishingiz kerak bo'lsa, createsuperuser buyruqdan foydalaning. 
-Odatiy bo'lib, administratorga kirish uchun foydalanuvchi atributiga ega bo'lishini talab is_staff True.
-
-Nihoyat, administrator interfeysida ilovangizning qaysi modellari tahrirlanishi kerakligini aniqlang.
-Ushbu modellarning har biri uchun ularni administratorda tavsiflanganidek ro'yxatdan o'tkazing.
-
-Sinf ModelAdmin administrator interfeysidagi modelning ko'rinishidir. admin.py Odatda, ular ilovangizda nomlangan faylda saqlanadi.
-
-from django.contrib import admin
-from myapp.models import Author
-
-class AuthorAdmin(admin.ModelAdmin):
-    pass
-
-admin.site.register(Author, AuthorAdmin)
-
-Sinflaringizni ro'yxatdan o'tkazish uchun dekorator ham mavjud.
-
-@admin.register(Author)
-class AuthorAdmin(admin.ModelAdmin):
-    pass
+    class AuthorAdmin(admin.ModelAdmin):
+        pass
+    
+    admin.site.register(Author, AuthorAdmin)
+    
+    Sinflaringizni ro'yxatdan o'tkazish uchun dekorator ham mavjud.
+    
+    @admin.register(Author)
+    class AuthorAdmin(admin.ModelAdmin):
+        pass
+✅ Views va templates lar bilan ishlash.
+✅ Blog Detail.
