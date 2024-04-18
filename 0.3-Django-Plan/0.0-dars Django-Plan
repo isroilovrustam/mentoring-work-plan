@@ -24,8 +24,9 @@ Beckend-Django.
     ✅ Queryset ga kirish va model manager
     ✅ QuerySet olish
     ✅ QuerySet filter
-    ✅ News list va detail page
 
+5 Template lar bilan ishlash
+    ✅ News list va detail page
     ✅ Template va static fayllar bilan ishlash
     ✅ Yangiliklar sayti shablonini Djangoga o'rnatish
     ✅ Home va Contact sahifalarini ishga tushurish
