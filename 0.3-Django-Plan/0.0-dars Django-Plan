@@ -9,7 +9,6 @@ Beckend-Django.
     ✅ Django qismlari bilan tanishish(Config, settings, urls).
     ✅ Hello World 
 2 Blog loyihasi. APP nima?, Model va Admin panel.
-    ✅ App, urls, views
     ✅ Modellar nima ekanligini tushunish
     ✅ Model yaratish.
     ✅ Makemigrations va migrate.
