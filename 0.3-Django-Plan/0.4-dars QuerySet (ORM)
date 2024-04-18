@@ -1,5 +1,11 @@
-4 QuerySet (ORM)
-    ✅ Queryset ga kirish va model manager
-    ✅ QuerySet olish
-    ✅ QuerySet filter
-    ✅ News list va detail page
+0.4-dars QuerySet (ORM)
+✅ ORM (Object-Relational Mapping)
+    ORM Django ning eng usturn traflaridan biri hisoblanadi.
+    Django ORM orqali biz ma'lumotlar bazasiga python dasturlash tilida o'zgartirish kiritishimiz mumkin.
+    Biror bir ma'lumotlarni o'chirishimiz yoki biror bir ma'lumot qo'shishimiz yoki olishimiz mumkin.
+
+    Django ORM buyuruqlar barcha to'plamlari Queryset lar deb ataladi.
+✅ Queryset ga kirish va model manager
+✅ QuerySet olish
+✅ QuerySet filter
+✅ News list va detail page
