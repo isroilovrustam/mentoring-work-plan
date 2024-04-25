@@ -15,33 +15,65 @@ Beckend-Django.
     ✅ Admin panel, createsuperuser (https://docs.djangoproject.com/en/4.2/ref/contrib/admin/)
     ✅ Views va templates lar bilan ishlash.
     ✅ Blog Detail.
-3 Yangiklar sayti loyihasi bilan tanishish
+3 Resume sayti loyihasi bilan tanishish
     ✅ Loyihani ishga tushurish va vertual muhit o'rnatish
     ✅ Database dizayinini yaratish. Drawsql.app
     ✅ Loyiha modelini tuzish
     ✅ Loyihani admin qismi bilan ishlash
+4 Shablondan foydalanish
+    ✅ Resume sayti shablonini Djangoga o'rnatish
+    ✅ Sahifani ishga tushurish
+5 Template lar bilan ishlash
+    ✅ News list va detail page
+    ✅ Template va static fayllar bilan ishlash
+6 Contact bilan ishlash 
+    ✅ Forma bilan ishlash. Contact form
+    ✅ Class bilan form view ni yaratish
+    ✅ ModelForm vs Form
+7 GitHub
+    ✅ Git. Loyihani githubga yuklash
+8 Blog sayti loyihasi
+    ✅ Blog sayti haqida ma'lumot 
+    ✅ Database dizayini bilan tanishish
+    ✅ Loyihani ishga tushurish
+    ✅ Loyiha modelarini tuzish
+    ✅ Loyihani admin qismi bilan ishlash
+9 Blog sayt shablonidan foydalanish
+    ✅ Shabloni djangoga o'rnatish
+    ✅ Blog sayt sahifalarini ishga tushurish
+10 Shabloni ulash. Loyihani to'ldirish
+    ✅ Blog sahifalarini ulash
+    ✅ Blog detail pageni ulash
+    ✅ Contact qismi bilan ishlash
+11 Slug bilan ishlash
+    ✅ URLni slug ga o'zgartirish. Get_absolute url  
+    ✅ Git. Loyihani githubga yuklash
+12 Views turlari bilan tanishish
+    ✅ Funksiyani asoslangan ko'rsatmalar (Function-based views)
+    ✅ Sinfdagi ko'rsatmalar (Class-based views)
+    ✅ Context_processor va get_context_data
+    ✅ Umumiy ko'rsatmalar (Generic views)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 4 QuerySet (ORM)
     ✅ Queryset ga kirish va model manager
     ✅ QuerySet olish
     ✅ QuerySet filter
-5 Template lar bilan ishlash
-    ✅ News list va detail page
-    ✅ Template va static fayllar bilan ishlash
-6 Shablondan foydalanish
-    ✅ Yangiliklar sayti shablonini Djangoga o'rnatish
-    ✅ Home va Contact sahifalarini ishga tushurish
-7 Contact bilan ishlash 
-    ✅ Forma bilan ishlash. Contact form
-    ✅ Class bilan form view ni yaratish
-    ✅ ModelForm vs Form
 
-    ✅ Bosh sahifa yangiliklarini kategotiya bo'yicha ko'rsatish
-    ✅ Context_processor va get_context_data
-    ✅ Template teglari. Loyihani to'ldirish
-    ✅ URLni slug ga o'zgartirish. Get_absolute url
-    ✅ Yangiliklar sayt sahifalarini yaratish
-
-    ✅ Git. Loyihani githubga yuklash
     ✅ Yangiliklarni tahrirlash va o'chirish funksiyalari
     ✅ Saytga yangilik qo'shish. CreateView
 
