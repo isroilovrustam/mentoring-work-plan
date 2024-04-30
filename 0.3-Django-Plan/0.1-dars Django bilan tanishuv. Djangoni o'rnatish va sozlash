@@ -32,6 +32,16 @@
     rmdir (papka_nomi) -> terminal orqali papka o'chirish uchun ishlatilinadi.
 
 ✅ Vertual muhit (venv) bilan tanishish.
+Muhit nima?
+    • Kompyuterimizda bir vaqtda turli loyihalar ustida ishlashimiz tabiy
+    • Har bir loyihaning o'ziga xos talablari bo'lishi mumkin
+        • Python versiyasi
+        • Kutubxonalar
+        • Modullar
+    • Agar biz loyihalar uchun alohida muhit yaratmasak, kompyuterimizga o'rnatilgan barcha qo'shimcha kutubxona, paket
+    va modular barcha loyihalarga ko'rinib turadi
+    • Ma'lum bir loyihaga xos paketni o'rnatishimiz esa boshga
+    loyihaning to'g'ri ishlashiga halagit qilishi mumkin
 
 ✅ Blog loyihasini ishga tushurish.
     python3 -m venv venv -> muhit o'rnatadi.
