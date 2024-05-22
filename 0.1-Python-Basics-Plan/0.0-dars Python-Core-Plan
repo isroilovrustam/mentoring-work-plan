@@ -19,7 +19,7 @@ Python core.
     ✅ Shartlar bilan tanishish (a == b, a != b, a < b, a > b, a <= b, a >= b)
     ✅ Mantiq operatorlari (and, or, not)
 4 Pythonda While sikl operatori (breack, countinue)
-    ✅ While sikli bilan tanishish, misolar ishlab ko'rish (list, tuple, set, dic)
+    ✅ While sikli bilan tanishish
     ✅ breach, countinue va end=" "
 5 Pythonda For sikl operatori 
     ✅ For sikli bilan tanishish
