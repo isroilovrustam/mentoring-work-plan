@@ -63,8 +63,6 @@ Python core.
     ✅ *args, **kwargs haqida tushunchalar va foydalanish
 14 2D arrays 
     ✅ Misolar ishlash
-Loyiha ishi:
-    ✅ Mehmonxona dasturi
 15 EXAM
     ✅ O'tilgan mavzulardan imtihon
 16 Pythonda Modul yaratish, Dates, Random, Math, QRcode, Opencv va Turtle modullar
@@ -75,7 +73,6 @@ Loyiha ishi:
     ✅ QRcode
     ✅ Opencv
     ✅ Turtle
-
 
 Pythonda OOP(obyektga yo'naltirilgan dasturlash).
 
@@ -119,7 +116,7 @@ Pythonda OOP(obyektga yo'naltirilgan dasturlash).
     ✅ Deque
     ✅ Misol
 28 Tree
-    
+    ✅ Misol
 29 LeetCode
     ✅ LeetCode bilan tanishish
     ✅ 8 ta misol 
