@@ -14,3 +14,21 @@
    Topilgan yig'indi juft yoki toqligini ekrangga chiqaring.
 
 6. OOP, Class, Obyekt, INKAPSULYATSIYA, ABSTRAKTSIYA, VORISLIK, POLIMORFIZM, nima ekanligi haqida qisqa, aniq va tushunarlik javob bering.
+
+
+EXAM PRO 
+Kod to'g'ri bo'lsa: 4 ball
+Kodizni tushuntirib bera olsez: 4 ball
+Aniq va tushunatli kod bo'lsa: 2 ball
+
+O'quv markazi uchun ro'yxatga oluvchi dastur tuzing OOP ning 4 tamoyilaridan foydalaning !
+1-Misol uchun: O'quvchi ma'lumotlari(Ism, Familiya, Yosh, Manzil, Nomer, Kurs yo'nalishi)
+O'quvchining barcha hususiyatlari uchun metod yozing va yilini qaytaruvchi, umumiy malumotini qaytaruvchi
+faqat ism familiyasini qaytaruvchi metodlar yozing.
+Manzilini yashirin qiling va nechta o'quvchi bo'lganligini hisoblab ketuvchi kod yozing.
+N ta talabani ro'yxatga oling va Kurs yo'nalishlari(Foundation, Python, Java) bo'yicha guruxlarga ajrating.
+Umumiy o'quvchilar soni va  bir guruxda nechta o'quvchi borligini aniqlang.
+Guruxini (Python) tanlasam faqat shu talabalarni ekranga chiqaring.
+
+
+
