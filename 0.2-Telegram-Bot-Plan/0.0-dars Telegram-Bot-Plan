@@ -67,16 +67,7 @@ Telegram Bot Dars Reja:
   ✅️️️️️️️Inline mode nima?
   ✅️️️️️️️Matn, rasm, video, keyboardda qaytaramiz
   ✅️️️️️️️Resultsni siklda yaratish
-16.API bilan ishlash
-  ✅️️️️️️️API nima?
-  ✅️️️️️️️Bot uchun API ni qayerdan topamiz?
-  ✅️️️️️️️Telegram Bot API
-  ✅️️️️️️️Minglab API lar ro'yxati
-  ✅️️️️️️️Pythonda API bilan ishlash
-  ✅️️️️️️️Kodlar: Apilarni ishlatib ko'rish
-  ✅️️️️️️️jsonExtract funksiyasi kodi
-  ✅️️️️️️️GitHub
-17.Ma`lumotlar ombori. SQLITE
+16.Ma`lumotlar ombori. SQLITE
   ✅️️️️️️️SQLite. Kirish
   ✅️️️️️️️Foydalanuvchilarni baraga qo'shish
   ✅️️️️️️️Admin kamandalari. Reklama yuborish
@@ -85,6 +76,16 @@ Telegram Bot Dars Reja:
 
 Gurux yaxshi o'zlashtira olsa o'tiladi
 
+
+17.API bilan ishlash
+  ✅️️️️️️️API nima?
+  ✅️️️️️️️Bot uchun API ni qayerdan topamiz?
+  ✅️️️️️️️Telegram Bot API
+  ✅️️️️️️️Minglab API lar ro'yxati
+  ✅️️️️️️️Pythonda API bilan ishlash
+  ✅️️️️️️️Kodlar: Apilarni ishlatib ko'rish
+  ✅️️️️️️️jsonExtract funksiyasi kodi
+  ✅️️️️️️️GitHub
 18.Ma'lumotlar ombori. Postgresql
   ✅️️️️️️️PostgreSQL o'rnatamiz
   ✅️️️️️️️postgresql.py
