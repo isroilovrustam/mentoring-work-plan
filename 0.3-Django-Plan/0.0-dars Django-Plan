@@ -7,13 +7,13 @@ Beckend-Django.
     ✅ Vertual muhit (venv) bilan tanishish.
     ✅ Django qismlari bilan tanishish(Config, settings, urls).
     ✅ Hello World 
-2 Blog loyihasi. APP nima?, Model va Admin panel.
+2 APP nima?, Model va Admin panel.
     ✅ Modellar nima ekanligini tushunish
     ✅ Model yaratish.
     ✅ Makemigrations va migrate.
     ✅ Admin panel, createsuperuser (https://docs.djangoproject.com/en/4.2/ref/contrib/admin/)
     ✅ Views va templates lar bilan ishlash.
-    ✅ Blog Detail.
+    ✅ Bootstrap 5
 3 Resume sayti loyihasi bilan tanishish
     ✅ Loyihani ishga tushurish va vertual muhit o'rnatish
     ✅ Database dizayinini yaratish. Drawsql.app
