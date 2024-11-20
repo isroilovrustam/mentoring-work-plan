@@ -65,7 +65,7 @@ Python core.
     ✅ Misolar ishlash
 15 EXAM
     ✅ O'tilgan mavzulardan imtihon
-16 Pythonda Modul yaratish, Dates, Random, Math, QRcode, Opencv va Turtle modullar
+16 Pythonda Modul yaratish, Dates, Random, Math, QRcode, Shtrixcode, Opencv va Turtle modullar
     ✅ Modul yaratish
     ✅ Datatime moduli, datetime.datetime.now(), date(), time(), hour, microsecond, minute, second 
     ✅ Random moduli, randint, choice, shuffle
@@ -73,6 +73,7 @@ Python core.
     ✅ QRcode
     ✅ Opencv
     ✅ Turtle
+    ✅ Shtrixcode
 
 Pythonda OOP(obyektga yo'naltirilgan dasturlash).
 
