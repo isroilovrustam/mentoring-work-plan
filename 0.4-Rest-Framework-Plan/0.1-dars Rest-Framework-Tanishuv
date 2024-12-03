@@ -1,6 +1,126 @@
 0.1-dars Rest-Framework-Tanishuv 
-    ✅ API bilan tanishuv?
-    ✅ HTTP metodlar, enpoints va status kodlar
-    ✅ Django Rest-Framworkni o'rnatish va sozlash.
-    ✅ Serializer nima?
-    ✅ ListAPIView, RetrieveAPIView(detail), DestroyAPIView(delete) and UpdateAPIView
+✅ API bilan tanishuv?
+    API (Application Programming Interface) bu – dasturlar o‘zaro "muloqot" qilishi uchun qoida va vositalar to‘plami.
+    Oddiy qilib aytganda, API – bu dasturlarga bir-biri bilan ma’lumot almashish imkoniyatini beradigan ko‘prik.
+
+    Hayotiy misol:
+    Restoranni tasavvur qiling. Siz menyudan taom tanlaysiz, lekin oshxonaga o‘zingiz kirib, 
+    taomni olib kelmaysiz. Buning o‘rniga, ofitsiantga buyurtma berasiz.
+    API – bu ofitsiant kabi ishlaydi:
+        1.Sizning buyurtmangizni oshxonaga yetkazadi.
+        2.Oshxonadan tayyor taomni olib, sizga qaytaradi.
+    
+    Texnologiyadagi misol:
+    Agar siz bir ilovadan boshqa ilova xizmatidan foydalanayotgan bo‘lsangiz, masalan:
+        1.Mobil ilovada ob-havo ma’lumotlarini ko‘rayotganingizda, bu ma’lumotlar API orqali ob-havo serveridan olinadi.
+        2.Google Maps API orqali sizning ilovangiz xarita funksiyalarini ishlatadi.
+
+    Qisqacha API vazifasi:
+        1.So‘rovlarni qabul qiladi (masalan, ma’lumot so‘rash).
+        2.Ma’lumotni olish yoki o‘zgartirish uchun serverga jo‘natadi.
+        3.Natijani qaytaradi (masalan, JSON formatidagi javob).
+✅ HTTP metodlar, enpoints va status kodlar
+    HTTP metodlar API so‘rovlarining turini aniqlash uchun ishlatiladi:
+        * GET: Ma'lumotlarni olish uchun (masalan, foydalanuvchilar ro‘yxati).
+        * POST: Yangi ma'lumot qo‘shish (masalan, yangi foydalanuvchi yaratish).
+        * PUT: Ma'lumotni yangilash yoki o‘zgartirish (masalan, foydalanuvchi ma'lumotlarini tahrirlash).
+        * DELETE: Ma'lumotni o‘chirish (masalan, foydalanuvchini o‘chirish).
+        * PATCH: Ma'lumotning faqat bir qismini yangilash.
+
+    Endpoints API-da har bir xizmatga murojaat qilish uchun maxsus URL’lar ishlatiladi, ular endpoint deyiladi.
+        * GET/users/ – barcha foydalanuvchilarni olish.
+        * POST/users/ – yangi foydalanuvchi qo‘shish.
+        * GET/users/{id}/ – ma’lum ID ga ega foydalanuvchini olish.
+        * PUT/users/{id}/ – ma’lum foydalanuvchini yangilash.
+        * DELETE/users/{id}/ – foydalanuvchini o‘chirish.
+
+    Status kodlar API so‘roviga javob sifatida HTTP status kodlari qaytariladi:
+        * 200 (OK): So‘rov muvaffaqiyatli bajarildi.
+        * 201 (Created): Yangi resurs muvaffaqiyatli yaratildi.
+        * 204 (No Content): So‘rov muvaffaqiyatli, lekin qaytariladigan ma'lumot yo‘q.
+        * 400 (Bad Request): So‘rovda xato bor.
+        * 401 (Unauthorized): Avtorizatsiya talab qilinadi.
+        * 403 (Forbidden): Ruxsat yo‘q.
+        * 404 (Not Found): Resurs topilmadi.
+        * 500 (Internal Server Error): Serverda xatolik yuz berdi.
+
+    Qisqa misol:
+        GET/books/ → 200 OK (Kitoblar ro‘yxati qaytariladi).
+        POST/books/ → 201 Created (Yangi kitob qo‘shildi).
+        GET/books/999/ → 404 Not Found (Kitob topilmadi).
+
+✅ Django Rest-Framworkni o'rnatish va sozlash.
+    Django REST Framework nima?
+        Django web-ramkasining kengaytmasi, RESTful API-larni tez va oson yaratishga yordam beradi.
+        DRF oddiygina Django modellarini API’ga aylantirish uchun vositalarni taqdim etadi.
+
+    DRF afzalliklari
+        1.Tushunarli va foydalanuvchilarga qulay API interfeysi.
+        2.Kuchli autentifikatsiya va ruxsat tizimlari.
+        3.JSON va boshqa formatlarni qo‘llab-quvvatlash.
+        4.Serializatsiyalar orqali ma’lumotlarni boshqarish oson.
+
+    REST API nima?
+        * REST (Representational State Transfer) – bu web-servislar uchun arxitektura usuli.
+        * Oddiy HTTP so‘rovlar orqali ma’lumot almashish (GET, POST, PUT, DELETE).
+        * REST API-ni real hayotdagi misollar: 
+          masalan, iqlim ma’lumotlari olish yoki mobil ilovalar uchun backend sifatida foydalanish.
+
+     DRF o‘rnatish:
+        pip install djangorestframework
+
+    Oddiy API yaratish bosqichlari
+        1.Django loyihasini yaratish:
+            django-admin startproject myproject
+            cd myproject
+            python manage.py startapp api
+        2.App-ni INSTALLED_APPSga qo‘shish:
+            INSTALLED_APPS = [
+                'rest_framework',
+                'api',
+            ]
+        3.Model yaratish (masalan, Kitob modeli):
+            class Book(models.Model):
+                title = models.CharField(max_length=100)
+                author = models.CharField(max_length=100)
+                published_date = models.DateField()
+        4.Serializer yaratish:
+            from rest_framework import serializers
+            from .models import Book
+                class BookSerializer(serializers.ModelSerializer):
+                    class Meta:
+                        model = Book
+                        fields = '__all__'
+        5.View yozish:
+            from rest_framework.views import APIView
+            from rest_framework.response import Response
+            from .models import Book
+            from .serializers import BookSerializer
+            class BookList(APIView):
+                def get(self, request):
+                    books = Book.objects.all()
+                    serializer = BookSerializer(books, many=True)
+                    return Response(serializer.data)
+
+        6.URL-lar qo‘shish:
+            from django.urls import path
+            from .views import BookList
+            
+            urlpatterns = [
+                path('books/', BookList.as_view()),
+            ]
+
+✅ Serializer nima?
+    Serializer – bu Django REST Framework (DRF) da ma’lumotlarni Django modelidan yoki
+    boshqa manbadan olish va ularni JSON kabi formatga aylantirish yoki aksincha, kiruvchi 
+    JSON ma’lumotlarni Python obyektlariga yoki modelga o‘tkazish uchun ishlatiladigan vosita.
+
+    misol:
+        {
+            "id": 1,
+            "title": "Python Dasturlash",
+            "author": "Rustamjon",
+            "published_date": "2024-12-01"
+        }
+
+✅ ListAPIView, RetrieveAPIView(detail), DestroyAPIView(delete) and UpdateAPIView
