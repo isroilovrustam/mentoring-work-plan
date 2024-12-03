@@ -20,6 +20,11 @@
         2.Ma’lumotni olish yoki o‘zgartirish uchun serverga jo‘natadi.
         3.Natijani qaytaradi (masalan, JSON formatidagi javob).
 ✅ HTTP metodlar, enpoints va status kodlar
+    https://www.google.com/maps/  -> url
+    https -> schema
+    www.google.com -> hostname
+    maps -> optionl path
+
     HTTP metodlar API so‘rovlarining turini aniqlash uchun ishlatiladi:
         * GET: Ma'lumotlarni olish uchun (masalan, foydalanuvchilar ro‘yxati).
         * POST: Yangi ma'lumot qo‘shish (masalan, yangi foydalanuvchi yaratish).
