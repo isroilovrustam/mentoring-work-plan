@@ -5,19 +5,16 @@ Rest-Framework-Plan
     ✅ HTTP metodlar, enpoints va status kodlar
     ✅ Django Rest-Framworkni o'rnatish va sozlash.
     ✅ Serializer nima?
-    ✅ ListAPIView, RetrieveAPIView(detail), DestroyAPIView(delete) and UpdateAPIView
+    ✅ ListAPIView, CreateAPIView, RetrieveAPIView(detail), DestroyAPIView(delete) and UpdateAPIView
 2 Generic views
-    ✅ CreateAPIView
     ✅ ListCreateAPIView, RetrieveUpdateView, RetrieveUpdateDestroyView
-    ✅ Function view
-3 Postman, Swagger va Redoc ni o'rnatish
     ✅ Swagger
     ✅ Postman
     ✅ Redoc
-4 APIView bilan tanishish.
+3 APIView bilan tanishish.
     ✅ ListAPIView, RetrieveAPIView
     ✅ UpdateAPIView, CreateAPIView, DestroyAPIView
-5 Serializer, Validation 
+4 Serializer, Validation 
     ✅ ModelSerializer va Serializer
     ✅ Validation vs FieldValidation
 6 Autentifikatsiya turlari
