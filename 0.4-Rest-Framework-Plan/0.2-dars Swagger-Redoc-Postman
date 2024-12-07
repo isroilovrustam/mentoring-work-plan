@@ -1,0 +1,5 @@
+2 Generic views
+    ✅ ListCreateAPIView, RetrieveUpdateView, RetrieveUpdateDestroyView
+    ✅ Swagger
+    ✅ Postman
+    ✅ Redoc
