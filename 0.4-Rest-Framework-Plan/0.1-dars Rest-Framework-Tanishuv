@@ -128,4 +128,27 @@
             "published_date": "2024-12-01"
         }
 
-✅ ListAPIView, RetrieveAPIView(detail), DestroyAPIView(delete) and UpdateAPIView
+✅ ListAPIView, RetrieveAPIView(detail), DestroyAPIView(delete), CreateAPIView and UpdateAPIView
+    class BookListAPIView(generics.ListAPIView):
+        queryset = Book.objects.all()
+        serializer_class = BookSerializer
+
+    class BookDetailAPIView(generics.RetrieveAPIView):
+        queryset = Book.objects.all()
+        serializer_class = BookSerializer
+
+    class BookDeleteAPIView(generics.DestroyAPIView):
+        queryset = Book.objects.all()
+        serializer_class = BookSerializer
+    
+    class BookCreateAPIView(generics.CreateAPIView):
+        queryset = Book.objects.all()
+        serializer_class = BookSerializer
+    
+    
+    class BookUpdateAPIView(generics.UpdateAPIView):
+        queryset = Book.objects.all()
+        serializer_class = BookSerializer
+    
+    
+
