@@ -8,9 +8,8 @@ Rest-Framework-Plan
     ✅ Generic views: ListAPIView, CreateAPIView, RetrieveAPIView(detail), DestroyAPIView(delete) and UpdateAPIView
 2 Swagger, Redoc and Postman
     ✅ ListCreateAPIView, RetrieveUpdateView, RetrieveUpdateDestroyView
-    ✅ Swagger
+    ✅ Swagger and Redoc
     ✅ Postman
-    ✅ Redoc
 3 APIView bilan tanishish.
     ✅ ListAPIView, RetrieveAPIView
     ✅ UpdateAPIView, CreateAPIView, DestroyAPIView
