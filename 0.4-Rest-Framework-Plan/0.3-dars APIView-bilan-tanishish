@@ -1,3 +1,70 @@
 0.3-dars APIView-bilan-tanishish
-    ✅ ListAPIView, RetrieveAPIView
-    ✅ UpdateAPIView, CreateAPIView, DestroyAPIView
+✅ ListAPIView, RetrieveAPIView
+    class BookListAPIView(APIView):
+        def get(self, request):
+            # Kitoblarni olish
+            books = Book.objects.all()
+            
+            # Ma'lumotlar yo'q bo'lsa tekshirish
+            if not books.exists():
+                return Response({"error": "No books found"}, status=status.HTTP_404_NOT_FOUND)
+    
+            serializer = BookSerializer(books, many=True)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+    
+    class BookRetrieveAPIView(APIView):
+        def get(self, request, pk):
+            try:
+                # ID bo'yicha kitobni qidiring
+                book = Book.objects.get(pk=pk)
+                # Seriyalashtirish
+                serializer = BookSerializer(book)
+                return Response(serializer.data, status=status.HTTP_200_OK)
+            except Book.DoesNotExist:
+                # Ma'lumot topilmagan holat
+                return Response({"error": "Book not found"}, status=status.HTTP_404_NOT_FOUND)
+
+    
+✅ UpdateAPIView, CreateAPIView, DestroyAPIView
+    class BookUpdateAPIView(APIView):
+        def put(self, request, pk):
+            try:
+                # Kitobni ID bo'yicha qidirish
+                book = Book.objects.get(pk=pk)
+                
+                # Serializerni ma'lumotlar bilan tekshirish
+                serializer = BookSerializer(book, data=request.data, partial=True)
+                if serializer.is_valid():
+                    serializer.save()
+                    return Response(serializer.data, status=status.HTTP_200_OK)
+                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            except Book.DoesNotExist:
+                # Ma'lumot topilmagan holat
+                return Response({"error": "Book not found"}, status=status.HTTP_404_NOT_FOUND)
+
+    class BookCreateAPIView(APIView):
+        def post(self, request):
+            # Serializerni yaratish va ma'lumotni tekshirish
+            serializer = BookSerializer(data=request.data)
+            
+            if serializer.is_valid():
+                # Ma'lumotni saqlash
+                serializer.save()
+                return Response(serializer.data, status=status.HTTP_201_CREATED)
+            
+            # Ma'lumotlar xato bo'lsa, xatolik qaytarish
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+    class BookDestroyAPIView(APIView):
+        def delete(self, request, pk):
+            try:
+                # Kitobni ID bo'yicha qidirish
+                book = Book.objects.get(pk=pk)
+                
+                # O'chirish
+                book.delete()
+                return Response({"message": "Book deleted successfully"}, status=status.HTTP_200_OK)
+            except Book.DoesNotExist:
+                # Ma'lumot topilmagan holat
+                return Response({"error": "Book not found"}, status=status.HTTP_404_NOT_FOUND)
