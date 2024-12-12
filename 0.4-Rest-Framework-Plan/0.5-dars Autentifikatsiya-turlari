@@ -1,4 +1,74 @@
 0.5-dars Autentifikatsiya-turlari
+
+Django REST Framework (DRF) autentifikatsiyasi foydalanuvchini identifikatsiya qilish va API so‘rovlariga 
+ruxsat berish uchun turli usullarni qo‘llaydi.DRF quyidagi asosiy autentifikatsiya turlarini taklif qiladi:
+  1.Basic Authentication
+      Eng soda autentifikatsiya usuli hisoblanadi username va password kiritilinadi va 
+      bazadan tekshiriladi agar username va password to'g'ri bo'lsa userga access(userga kirishga ruxsat beriladi)
+      Ishlatish:
+      -------------------------------
+      REST_FRAMEWORK = {
+          'DEFAULT_AUTHENTICATION_CLASSES': [
+              'rest_framework.authentication.BasicAuthentication',
+          ]
+      }
+      -------------------------------
+      Kamchiliklari:
+        * Havfsiz emas (https yo‘q bo‘lsa, ma’lumotlar shifrlanmaydi).
+        * API so‘rov uchun qulay emas.
+  2.Session Authentication
+      Bu autentifikatsiya turi Django’ning o‘zidagi sessiya tizimiga asoslanadi va odatda
+      veb-saytlar uchun ishlatiladi. Foydalanuvchi veb-sahifada login qilgandan so‘ng, brauzerda cookie saqlanadi.
+      Har bir API so‘rovda cookie orqali sessiya ID yuboriladi va DRF foydalanuvchini aniqlaydi.
+      Ishlatish: DRF konfiguratsiyasida SessionAuthentication ni yoqish kerak.
+      -------------------------------
+      REST_FRAMEWORK = {
+          'DEFAULT_AUTHENTICATION_CLASSES': [
+              'rest_framework.authentication.SessionAuthentication',
+          ]
+      }
+      -------------------------------
+      Kamchiliklari:
+        * Mobil va JavaScript asosidagi frontend ilovalar uchun mos emas.
+  3.Token Authentication
+      Bu autentifikatsiya usuli API asosida ishlaydigan ilovalar uchun mo‘ljallangan.
+      Login vaqtida foydalanuvchiga noyob token beriladi. Keyin har bir API so‘rovda 
+      Authorization sarlavhasi (header) orqali token yuboriladi:
+      Authorization: Token <foydalanuvchi-tokeni>
+      Ishlatish: TokenAuthentication ni yoqish va foydalanuvchilar uchun token yaratish kerak.
+      -------------------------------
+      REST_FRAMEWORK = {
+          'DEFAULT_AUTHENTICATION_CLASSES': [
+              'rest_framework.authentication.TokenAuthentication',
+          ]
+      }
+      -------------------------------
+  4.JWT Authentication (JSON Web Token)
+      Bu keng qo‘llaniladigan zamonaviy autentifikatsiya usuli.
+      Foydalanuvchi login qilganda server tomonidan qisqa muddatli token (access token) va uzoq muddatli 
+      token (refresh token) yuboriladi. API so‘rovlarida foydalanuvchi Authorization sarlavhasida tokenni yuboradi:
+      Authorization: Bearer <access-token>
+      Afzalliklari:
+        * Tez va engil.
+        * Frontend va mobil ilovalar bilan mos.
+      Ishlatish:
+        djangorestframework-simplejwt paketini o‘rnating va JWT ni sozlang:
+      -------------------------------
+      INSTALLED_APPS = [
+          'rest_framework',
+          'rest_framework_simplejwt',
+      ]
+      
+      REST_FRAMEWORK = {
+          'DEFAULT_AUTHENTICATION_CLASSES': [
+              'rest_framework_simplejwt.authentication.JWTAuthentication',
+          ],
+      }
+      -------------------------------
+  5.Custom Authentication
+      DRF shuningdek o‘ziga xos autentifikatsiya tizimini yaratishga ruxsat beradi. 
+      Siz yangi autentifikatsiya klassini yozib, uni sozlashingiz mumkin.
+
 ✅ Auth orqali autentifikatsiya qilish
 
 ✅ Auth orqali foydalanuvchilarni ro'yxatdan o'tkazish
