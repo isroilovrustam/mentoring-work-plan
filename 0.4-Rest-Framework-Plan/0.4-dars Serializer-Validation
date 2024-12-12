@@ -3,7 +3,45 @@
 
 
 ✅ Validation vs FieldValidation
+from rest_framework import serializers
+from rest_framework.exceptions import ValidationError
 
+from .models import Book
+
+
+class BookSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Book
+        fields = '__all__'
+
+    def validate(self, data):
+        title = data.get('title', None)
+        author = data.get('author', None)
+        if not title.isalpha():
+            raise ValidationError(
+                {
+                    "status": False,
+                    "message": "Kitob sarlavhasi harflardan iborat bo'lishi kerak!"
+                }
+            )
+        if Book.objects.filter(title=title, author=author).exists():
+            raise ValidationError(
+                {
+                    "status": False,
+                    "message": "Kitob title va authori bir xil bo'lgan kitob mavjud"
+                }
+            )
+
+        return data
+
+    def validate_price(self, price):
+        if int(price) < 0 or int(price) > 9999999999:
+            raise ValidationError(
+                {
+                    "status": False,
+                    "message": "Kitob narxini tatog'ri kiritdingiz"
+                }
+            )
 
 
 
