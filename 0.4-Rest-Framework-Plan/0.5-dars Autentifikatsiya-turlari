@@ -69,28 +69,60 @@ ruxsat berish uchun turli usullarni qo‘llaydi.DRF quyidagi asosiy autentifikat
       DRF shuningdek o‘ziga xos autentifikatsiya tizimini yaratishga ruxsat beradi. 
       Siz yangi autentifikatsiya klassini yozib, uni sozlashingiz mumkin.
 
-✅ Auth orqali autentifikatsiya qilish
+✅ Auth orqali autentifikatsiya qilish (login, logout)
 pip install dj-rest-auth
 config -> settings
-      -------------------------------
-      INSTALLED_APPS = [
-          ...
-          # packages
-          'rest_framework.authtoken'
-          'dj-rest-auth'
-      
-          ...
-      ]
-      -------------------------------
+    -------------------------------
+    INSTALLED_APPS = [
+        ...
+        # packages
+        'rest_framework.authtoken'
+        'dj-rest-auth'
+    
+        ...
+    ]
+    -------------------------------
 config -> urls
-      -------------------------------
-      urlpatterns = [
-          ...
-          path('api-auth/', include('rest_framework.urls')),
-          path('api/v1/dj-rest-auth/', include('dj_rest_auth.urls')),
-          ...
-      ]
-      -------------------------------
+    -------------------------------
+    urlpatterns = [
+        ...
+        path('api-auth/', include('rest_framework.urls')),
+        path('api/v1/dj-rest-auth/', include('dj_rest_auth.urls')),
+        ...
+    ]
+    -------------------------------
 
 
-✅ Auth orqali foydalanuvchilarni ro'yxatdan o'tkazish
+✅ Auth orqali foydalanuvchilarni ro'yxatdan o'tkazish (registration)
+
+pip install django-allauth
+config -> settings
+    -------------------------------
+    INSTALLED_APPS = [
+        "django.contrib.sites", # yangi qo'shildi
+    
+        ...
+        'allauth',
+        'allauth.account',
+        'allauth.socialaccount',
+        'dj_rest_auth.registration',
+        ...
+    ]
+
+    MIDDLEWARE = [
+        ...
+        # allauth middleware
+        'allauth.account.middleware.AccountMiddleware',
+    ]
+
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    SITE_ID = 1
+    -------------------------------
+config -> urls
+    -------------------------------
+    urlpatterns = [
+        ...
+        path('api/v1/dj-rest-auth/registration/', include('dj_rest_auth.registration.urls')),
+        ...
+    ]
+    -------------------------------
