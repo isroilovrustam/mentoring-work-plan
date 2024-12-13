@@ -70,5 +70,27 @@ ruxsat berish uchun turli usullarni qo‘llaydi.DRF quyidagi asosiy autentifikat
       Siz yangi autentifikatsiya klassini yozib, uni sozlashingiz mumkin.
 
 ✅ Auth orqali autentifikatsiya qilish
+pip install dj-rest-auth
+config -> settings
+      -------------------------------
+      INSTALLED_APPS = [
+          ...
+          # packages
+          'rest_framework.authtoken'
+          'dj-rest-auth'
+      
+          ...
+      ]
+      -------------------------------
+config -> urls
+      -------------------------------
+      urlpatterns = [
+          ...
+          path('api-auth/', include('rest_framework.urls')),
+          path('api/v1/dj-rest-auth/', include('dj_rest_auth.urls')),
+          ...
+      ]
+      -------------------------------
+
 
 ✅ Auth orqali foydalanuvchilarni ro'yxatdan o'tkazish
