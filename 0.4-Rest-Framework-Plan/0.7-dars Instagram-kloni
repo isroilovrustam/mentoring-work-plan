@@ -1,0 +1,6 @@
+0.7-dars Instagram kloni loyihasi bilan tanishuv
+  1. User Authentication - login, logout, signup, rest and forget password, change password
+  2. Post - image, caption, likes, numbers of likes, comments, numbers of comments
+  3. Profile - user data, change profile, followers, following, block
+  4. Notification - Following, reply comment
+  5. Story
