@@ -1,2 +1,23 @@
 0.6-dars Viewset-Router
-Viewset-Router
+✅ Takrorlash (Generic va APIView)
+✅ Viewset va Router
+
+views -> 
+    ----------------------
+    from rest_framework.viewsets import ModelViewSet
+    
+    class BookViewSet(ModelViewSet):
+        queryset = Book.objects.all()
+        serializer_class = BookSerializer
+    ----------------------
+urls ->
+    ----------------------
+    from rest_framework.routers import SimpleRouter
+
+    router = SimpleRouter()
+    router.register("books", BookViewSet, basename="books")
+    
+    urlpatterns += router.urls
+    ----------------------
+
+    https://www.cdrf.co/
