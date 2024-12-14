@@ -22,7 +22,10 @@ Rest-Framework-Plan
 6 Viewset va Router 
     ✅ Takrorlash (Generic va APIView)
     ✅ Viewset va Router
-7 Instagram kloni loyihasi bilan tanishuv
+7 DRF da Instagram kloni 
+    ✅Loyihasi bilan tanishuv
+    ✅Loyihani ishga tushurish
+    ✅Postgresql ba'zasiga ulash
 
 
 
