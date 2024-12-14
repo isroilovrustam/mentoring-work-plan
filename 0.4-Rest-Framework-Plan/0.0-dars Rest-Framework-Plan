@@ -16,9 +16,11 @@ Rest-Framework-Plan
 4 Serializer, Validation 
     ✅ ModelSerializer va Serializer
     ✅ Validation vs FieldValidation
-6 Autentifikatsiya turlari
+5 Autentifikatsiya turlari
     ✅ Auth orqali autentifikatsiya qilish
     ✅ Auth orqali foydalanuvchilarni ro'yxatdan o'tkazish
+6 Viewset va Router 
+    ✅ Takrorlash (Generic va APIView)
     ✅ Viewset va Router
 7 Instagram kloni loyihasi bilan tanishuv
 
