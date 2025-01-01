@@ -13,15 +13,26 @@ Rest-Framework-Plan
 3 APIView bilan tanishish.
     ✅ ListAPIView, RetrieveAPIView
     ✅ UpdateAPIView, CreateAPIView, DestroyAPIView
-4 Serializer, Validation 
-    ✅ ModelSerializer va Serializer
-    ✅ Validation vs FieldValidation
-5 Autentifikatsiya turlari
-    ✅ Auth orqali autentifikatsiya qilish
-    ✅ Auth orqali foydalanuvchilarni ro'yxatdan o'tkazish
-6 Viewset va Router 
+4 Viewset va Router 
     ✅ Takrorlash (Generic va APIView)
     ✅ Viewset va Router
+5 Serializer, Validation 
+    ✅ ModelSerializer va Serializer
+    ✅ Validation vs FieldValidation
+6 Autentifikatsiya turlari
+    ✅ Auth orqali autentifikatsiya qilish
+    ✅ Auth orqali foydalanuvchilarni ro'yxatdan o'tkazish
+7 Blog site uchun API chiqarish(1-qism)
+    ✅ Models (Blog, Comment, About, Contact) 
+    ✅ Serializers (Blog, Comment, About, Contact) 
+    ✅ Views (Blog, Comment, About, Contact) 
+8 Blog site uchun API chiqarish(2-qism)
+    ✅ Comments 
+    ✅ Serializers validation
+    ✅ Filters
+9 Blog site uchun API chiqarish(Takrorlash)
+    ✅ O'quvchilarni o'zlari uchun vazifa
+    ✅ Blog site uchun API chiqarish
 7 DRF da Instagram kloni 
     ✅Loyihasi bilan tanishuv
     ✅Loyihani ishga tushurish
