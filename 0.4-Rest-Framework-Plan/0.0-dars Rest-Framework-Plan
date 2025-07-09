@@ -1,42 +1,78 @@
 Rest-Framework-Plan
 
-1 Rest-Framework 
-    ✅ API bilan tanishuv?
-    ✅ HTTP metodlar, enpoints va status kodlar
-    ✅ Django Rest-Framworkni o'rnatish va sozlash.
+1.API bilan tanishuv
+    ✅ API haqida ma’lumotlar
+    ✅ HTTP methods, endpoints va status kodlar
+    ✅ Loyihani ishga tushurish
+2.Serializer va APIView lar bilan tanishish
     ✅ Serializer nima?
-    ✅ Generic views: ListAPIView, CreateAPIView, RetrieveAPIView(detail), DestroyAPIView(delete) and UpdateAPIView
-2 Swagger, Redoc and Postman
+    ✅ ListAPIView, RetrieveAPIView, UpdateAPIView, CreateAPIView, DestroyAPIView
     ✅ ListCreateAPIView, RetrieveUpdateView, RetrieveUpdateDestroyView
-    ✅ Swagger and Redoc
-    ✅ Postman
-3 APIView bilan tanishish.
-    ✅ ListAPIView, RetrieveAPIView
-    ✅ UpdateAPIView, CreateAPIView, DestroyAPIView
-4 Viewset va Router 
-    ✅ Takrorlash (Generic va APIView)
+    ✅ Swagger, Redoc and Postman
     ✅ Viewset va Router
-5 Serializer, Validation 
+3.Serializer, Validation va Takrorlash
     ✅ ModelSerializer va Serializer
     ✅ Validation vs FieldValidation
-6 Autentifikatsiya turlari
-    ✅ Auth orqali autentifikatsiya qilish
-    ✅ Auth orqali foydalanuvchilarni ro'yxatdan o'tkazish
-7 Blog site uchun API chiqarish(1-qism)
+4.Blog site uchun API chiqarish(1-qism)
     ✅ Models (Blog, Comment, About, Contact) 
     ✅ Serializers (Blog, Comment, About, Contact) 
-    ✅ Views (Blog, Comment, About, Contact) 
-8 Blog site uchun API chiqarish(2-qism)
+    ✅ Views (Blog, Comment, About, Contact)
+5.Blog site uchun API chiqarish(2-qism)
     ✅ Comments 
     ✅ Serializers validation
     ✅ Filters
-9 Blog site uchun API chiqarish(Takrorlash)
+6.Blog site uchun API chiqarish(Takrorlash)
     ✅ O'quvchilarni o'zlari uchun vazifa
     ✅ Blog site uchun API chiqarish
-7 DRF da Instagram kloni 
-    ✅Loyihasi bilan tanishuv
-    ✅Loyihani ishga tushurish
-    ✅Postgresql ba'zasiga ulash
+7.Loyihani postgresql ma’lumotlar bazasi bilan ulash
+    ✅ Postgresql ma’lumotlar bazasini yaratish
+8.Autentifikatsiya turlari
+    ✅ Auth orqali autentifikatsiya qilish
+    ✅ Auth orqali foydalanuvchilarni ro'yxatdan o'tkazish
+9.Instagram kloni loyihasi bilan tanishuv
+    ✅ Loyihani yaratish. Postgresql ma’lumotlar bazasiga ulash
+    ✅ Bir nechta kodimiz uchun qulayliklarni o’rganish
+    ✅ User modelini ko’rinishi
+10.User modelarini yozish
+    ✅ User va Shared modelini yozish
+    ✅ UserConfirmation modeli
+    ✅ User modeli save methodini override qilish
+11.SignupSerializer auth validate
+    ✅ SignupSerializer auth validate
+    ✅ Serializer Validate va Create method
+12.Asinxron tarzda email jo’natish va to representation
+    ✅ Asinxron tarzda email jo’natish va to representation
+    ✅ Phone regex va phonenumbers kutubxonasi
+13.User tasdiqlash kodini yuborish
+    ✅ VerifyAPIView - userni tasdiqlash
+    ✅ Tasdiqlash kodini qayta yuborish
+14.Registratsiyani tugatish
+    ✅ Foydalanuvchini (user) parolini va usernameni o’zgartirish
+    ✅ Foydalanuvchini rasmini almashtirish
+15.Login va LogOut
+    ✅ User login
+    ✅ Login refresh token
+    ✅ User logout. Blacklisted token
+16.Forget va reset password
+    ✅ Forget password
+    ✅ Reset password
+    ✅ Topshiriq Foydalanuvchining authentifikatsiya tizimini qurish
+17.Loyihaning database dizayini
+    ✅ Post, Comment, PostLike va CommentLike modellari
+    ✅ SerializerMethodFiled orqali postning layk va izohlari bilan ishlash
+18.Comment qismi bilan ishlash
+    ✅ CommentSerializers
+    ✅ PostLike va CommentLike serializers
+19.ModelAdmin orqali modelarni register qilish
+    ✅ PostListAPIView
+    ✅ Custom Pagination
+20.Instagramda post yaratish o’zgartirish va o’chirish
+    ✅ Ayni bir post izohlarini ko’rish va yaratish
+    ✅ Instagramda post izoh qoldirish va uni ko’rish
+    ✅ Post va izoh likelar ro’yxatini chiqarish
+    ✅ Post va izoh like bosishfunksiyasi
+    ✅ Toggle Like
+Omborxona tizimi - Mock Task
 
 
 
