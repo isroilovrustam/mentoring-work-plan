@@ -137,3 +137,48 @@ Beckend-Django.
 ✔️ STATIC_ROOT / collectstatic
 
 20-21-22. Shaxsiy Django(MVT) saytni yaratish va deploy qilish 
+
+23. Online Shop (Mini E-commerce)
+✔️ Online shop template tanlash
+✔️ HTML strukturasini o‘rganish
+✔️ CSS / JS fayllarni tekshirish
+✔️ Django projectga static fayllarni joylash
+✔️ base.html yaratish
+
+24. Models va Admin
+✔️ Category modeli
+✔️ Product modeli
+✔️ ForeignKey ishlatish
+✔️ slug field
+✔️ migrations
+✔️ admin panel
+✔️ admin customization
+
+25. Product list va Product detail
+✔️ ProductListView
+✔️ ProductDetailView
+✔️ slug orqali detail page
+✔️ templatega data yuborish
+✔️ category filter
+✔️ urls (/products/, /products/<slug>/, /category/<slug>/
+
+26. Cart (Savat) tizimi
+✔️ Cart logikasi
+✔️ Add to cart
+✔️ Remove from cart
+✔️ Cart page
+✔️ urls (/cart/, /cart/add/, /cart/remove/
+
+27. Order (Buyurtma tizimi)
+✔️ Order model
+✔️ OrderItem model
+✔️ checkout page
+✔️ form orqali buyurtma yuborish
+✔️ admin orqali buyurtmalarni ko‘rish
+
+28. Shopni yakunlash
+✔️ search qilish
+✔️ paginator
+✔️ product count
+✔️ related products
+✔️ saytni to‘liq test qilish
