@@ -1,105 +1,122 @@
 Beckend-Django.
 
-1 Django bilan tanishuv. Djangoni o'rnatish va sozlash
-    ✅ Django nima?
-    ✅ Terminal va CMD commands.
-    ✅ Django arxitekturasi va ishlash tamoyili (google search)
-    ✅ Vertual muhit (venv) bilan tanishish.
-    ✅ Django qismlari bilan tanishish(Config, settings, urls).
-    ✅ Hello World 
-2 APP nima?, Model va Admin panel.
-    ✅ Modellar nima ekanligini tushunish
-    ✅ Model yaratish.
-    ✅ Makemigrations va migrate.
-    ✅ Admin panel, createsuperuser (https://docs.djangoproject.com/en/4.2/ref/contrib/admin/)
-    ✅ Views va templates lar bilan ishlash.
-    ✅ Bootstrap 5
-3 Resume sayti loyihasi bilan tanishish
-    ✅ Loyihani ishga tushurish va vertual muhit o'rnatish
-    ✅ Database dizayinini yaratish. Drawsql.app
-    ✅ Loyiha modelini tuzish
-    ✅ Loyihani admin qismi bilan ishlash
-4 Shablondan foydalanish
-    ✅ Resume sayti shablonini Djangoga o'rnatish
-    ✅ Sahifani ishga tushurish
-5 Template lar bilan ishlash
-    ✅ News list va detail page
-    ✅ Template va static fayllar bilan ishlash
-6 Contact bilan ishlash 
-    ✅ Forma bilan ishlash. Contact form
-    ✅ Class bilan form view ni yaratish
-    ✅ ModelForm vs Form
-7 GitHub
-    ✅ Git. Loyihani githubga yuklash
-8 Blog sayti loyihasi
-    ✅ Blog sayti haqida ma'lumot 
-    ✅ Database dizayini bilan tanishish
-    ✅ Loyihani ishga tushurish
-    ✅ Loyiha modelarini tuzish
-    ✅ Loyihani admin qismi bilan ishlash
-9 Blog sayt shablonidan foydalanish
-    ✅ Shabloni djangoga o'rnatish
-    ✅ Blog sayt sahifalarini ishga tushurish
-10 Shabloni ulash. Loyihani to'ldirish
-    ✅ Blog sahifalarini ulash
-    ✅ Blog detail pageni ulash
-    ✅ Contact qismi bilan ishlash
-11 Slug bilan ishlash
-    ✅ URLni slug ga o'zgartirish. Get_absolute url  
-    ✅ Git. Loyihani githubga yuklash
-12 Views turlari bilan tanishish
-    ✅ Funksiyani asoslangan ko'rsatmalar (Function-based views)
-    ✅ Sinfdagi ko'rsatmalar (Class-based views)
-    ✅ Context_processor va get_context_data
-    ✅ Umumiy ko'rsatmalar (Generic views)
+1. Django bilan tanishuv, Virtual muhit, Django Project strukturasi, Birinchi sayt
+✔️ Django nima va nima uchun ishlatiladi
+✔️ Django qayerlarda ishlatiladi
+✔️ Django arxitekturasi (MTV)
+✔️ Django vs Flask
+✔️ Virtual Environment nima
+✔️ venv yaratish
+✔️ Django o‘rnatish
+✔️ pip va requirements.txt
+✔️ Django Project strukturasi (manage.py, settings.py, urls.py, wsgi.py / asgi.py)
+✔️ Django project yaratish (Hello World project)
+
+2. App tushunchasi, Models va Admin, 
+✔️ Django App nima va App yaratish
+✔️ Projectga app ulash
+✔️ Model nima, Field turlari
+✔️ Model yaratish
+✔️ makemigrations vs migrate
+✔️ Database bilan ishlash
+✔️ Admin panel
+✔️ createsuperuser
+✔️ Modelni admin panelga ulash
+✔️ Admin customization
+
+3. Birinchi loyiha (Mini Blog)
+✔️ Post
+✔️ Category
+✔️ Tag
+✔️ Comment
+
+4. Django Template vs Static fayllar
+✔️ Template nima
+✔️ Template syntax
+✔️ Variables
+✔️ Loops va conditions
+✔️ CSS
+✔️ JS
+✔️ Images
+✔️ Static folder
+
+5. Views vs URL routing
+✔️ Function Based Views vs Class Based Views
+✔️ urls.py, path, dynamic url
+
+6. Template inheritance
+✔️ base.html
+✔️ extends
+✔️ blocks
+
+7. Real Project (Blog)
+✔️ PostListView, PostDetailView
+✔️ slug field, get_absolute_url
+✔️ CreateView, UpdateView, DeleteView
+
+8. Django ORM (Muhim qism)
+✔️ QuerySet (objects.all())
+✔️ QuerySet filter (filter(), get(), exclude())
+✔️ ORM Advanced (order_by, annotate, aggregate, select_related, prefetch_related)
+
+9. Tayor templatedan foydalanib Resume sayt yaratish (1-qism)
+✔️ html, css, js, fayilarini o'rganib chiqish
+✔️ saytni frontend qismini tayorlash
+
+10. Tayor templatedan foydalanib Resume sayt yaratish (2-qism)
+✔️ model yaratish 
+✔️ admin qismini yozish 
+✔️ views yozish 
+✔️ urls yozish
+
+11. Tayor templatedan foydalanib Resume sayt yaratish (3-qism)
+✔️ Template va backend qismini ulash 
+✔️ category filters
+✔️ Saytni to'liq yakunlash
+
+12. Tayor templatedan foydalanib Blog sayt yaratish (1-qism)
+✔️ html, css, js, fayilarini o'rganib chiqish
+✔️ saytni frontend qismini tayorlash
+
+13. Tayor templatedan foydalanib Blog sayt yaratish (2-qism)
+✔️ model yaratish 
+✔️ admin qismini yozish 
+✔️ views yozish 
+✔️ urls yozish
+
+14. Tayor templatedan foydalanib Blog sayt yaratish (3-qism)
+✔️ Template va backend qismini ulash 
+✔️ category filters
+✔️ search qismi
+✔️ tag filter
+✔️ paginator
+✔️ Saytni to'liq yakunlash
+
+15. Authentication (1-qism)
+✔️ Django Authentication System tushunchasi
+✔️ Default User modeli (fields)
+✔️ User yaratish (createsuperuser, admin orqali)
+✔️ Login / Logout (LoginView, LogoutView)
+✔️ Template orqali login form ishlatish
+
+16. Authentication (2-qism)
+✔️ User registration (UserCreationForm)
+✔️ Custom Signup Form
+✔️ Profile modeli (OneToOneField)
+✔️ Profil sahifasi (ProfileView)
+✔️ Password reset (Django password reset system)
+
+17. Permissions
+✔️ login_required decorator
+✔️ LoginRequiredMixin
+✔️ UserPassesTestMixin
+✔️ permission_required
+✔️ staff user va superuser farqi
+
+18. Custom User Model (Juda muhim)
+✔️ Default user muammolari
+✔️ Custom User Model yaratish
+✔️ AbstractUser ishlatish
+✔️ Email yoki telefon orqali login
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4 QuerySet (ORM)
-    ✅ Queryset ga kirish va model manager
-    ✅ QuerySet olish
-    ✅ QuerySet filter
-
-    ✅ Yangiliklarni tahrirlash va o'chirish funksiyalari
-    ✅ Saytga yangilik qo'shish. CreateView
-
-    ✅ Login va logout
-    ✅ Foydalanuvchi Profilini yaratish
-    ✅ Foydalanuvchi parolini qayta tiklash
-    ✅ Signup. Ro'yxatdan o'tish
-    ✅ Signup. Class View orqali ro'yxatdan o'tish
-
-    ✅ Profile modelini yaratish. Profilni tahrirlash
-    ✅ Login_required dekoratori va LoginRequiredMixin
-    ✅ Profilda rasm va boshqa ma'lumotlarni chiqarish
-
-    ✅ Ruxsatnomalar. LoginRequiredMixin vs UserPassesTestMixin
-    ✅ Ruxsatnomalar. Admin sahifasi ochish. Dekaratorli ruxsatnomalar
-
-    ✅ Djangoda izoh qoldirish. Izoh modeli va formasini yaratish
-    ✅ Djangoda izoh qoldirish. View qismini yozamiz
-    ✅ Djangoda izoh qoldirish. Template qismini yozamiz
-
-    ✅ Yangiliklarni izlash funksiyasi
-    ✅ Ko'rishlar sonini aniqlash
-    ✅ Ko'rishlar sonini templateda aks etirish
-    ✅ Izohlar sonini templateda chiqarish va githubga o'zgarishlarni saqlash
-
-    ✅ Vebsaytni i18n orqali tarjima qilish
-    ✅ ModelTranslation modulidan foydalanib modelni tarjima qilish
-    ✅ Template dagi matnlarni tarjima qilish
-
-    ✅ Deployment. Ahost serveriga joylash
