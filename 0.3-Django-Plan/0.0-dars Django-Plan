@@ -8,83 +8,84 @@ Beckend-Django.
 ✔️ Virtual Environment nima
 ✔️ venv yaratish
 ✔️ Django o‘rnatish
-✔️ pip va requirements.txt
 ✔️ Django Project strukturasi (manage.py, settings.py, urls.py, wsgi.py / asgi.py)
 ✔️ Django project yaratish (Hello World project)
 
-2. App tushunchasi, Models va Admin, 
-✔️ Django App nima va App yaratish
-✔️ Projectga app ulash
-✔️ Model nima, Field turlari
-✔️ Model yaratish
-✔️ makemigrations vs migrate
-✔️ Database bilan ishlash
+2. Django Apps va Models
+✔️ App yaratish
+✔️ Model tushunchasi
+✔️ Field turlari
+✔️ makemigrations / migrate
 ✔️ Admin panel
 ✔️ createsuperuser
-✔️ Modelni admin panelga ulash
 ✔️ Admin customization
 
-3. Birinchi loyiha (Mini Blog)
-✔️ Post
-✔️ Category
-✔️ Tag
-✔️ Comment
+3. Model Relationships
+✔️ ForeignKey
+✔️ ManyToManyField
+✔️ related_name
+✔️ slug field
+✔️ str method
+✔️ Meta class
 
-4. Django Template vs Static fayllar
+4. Django Templates va Static files
 ✔️ Template nima
 ✔️ Template syntax
 ✔️ Variables
-✔️ Loops va conditions
-✔️ CSS
-✔️ JS
+✔️ Loops
+✔️ Conditions
+✔️ Static files
+✔️ CSS / JS ulash
 ✔️ Images
-✔️ Static folder
 
-5. Views vs URL routing
-✔️ Function Based Views vs Class Based Views
-✔️ urls.py, path, dynamic url
+5. Views va URL routing
+✔️ Function Based Views
+✔️ Class Based Views
+✔️ urls.py
+✔️ Dynamic urls
 
-6. Template inheritance
+6. Django ORM
+✔️ objects.all()
+✔️ filter()
+✔️ get()
+✔️ exclude()
+✔️ order_by()
+✔️ annotate()
+✔️ aggregate()
+✔️ select_related
+✔️ prefetch_related
+
+7. Template inheritance
 ✔️ base.html
 ✔️ extends
 ✔️ blocks
 
-7. Real Project (Blog)
-✔️ PostListView, PostDetailView
-✔️ slug field, get_absolute_url
-✔️ CreateView, UpdateView, DeleteView
-
-8. Django ORM (Muhim qism)
-✔️ QuerySet (objects.all())
-✔️ QuerySet filter (filter(), get(), exclude())
-✔️ ORM Advanced (order_by, annotate, aggregate, select_related, prefetch_related)
-
-9. Tayor templatedan foydalanib Resume sayt yaratish (1-qism)
+8. Resume website (Real Project) (1-qism)
 ✔️ html, css, js, fayilarini o'rganib chiqish
 ✔️ saytni frontend qismini tayorlash
 
-10. Tayor templatedan foydalanib Resume sayt yaratish (2-qism)
+9. Resume website (Real Project) (2-qism)
 ✔️ model yaratish 
 ✔️ admin qismini yozish 
 ✔️ views yozish 
 ✔️ urls yozish
 
-11. Tayor templatedan foydalanib Resume sayt yaratish (3-qism)
+10. Resume website (Real Project) (3-qism)
 ✔️ Template va backend qismini ulash 
 ✔️ category filters
 ✔️ Saytni to'liq yakunlash
 
-12. Tayor templatedan foydalanib Blog sayt yaratish (1-qism)
+11. Blog website (Real Project) (1-qism)
 ✔️ html, css, js, fayilarini o'rganib chiqish
 ✔️ saytni frontend qismini tayorlash
 
-13. Tayor templatedan foydalanib Blog sayt yaratish (2-qism)
+12. Blog website (Real Project) (2-qism)
 ✔️ model yaratish 
 ✔️ admin qismini yozish 
 ✔️ views yozish 
 ✔️ urls yozish
 
-14. Tayor templatedan foydalanib Blog sayt yaratish (3-qism)
+13. Blog website (Real Project) (3-qism)
 ✔️ Template va backend qismini ulash 
 ✔️ category filters
 ✔️ search qismi
@@ -92,31 +93,47 @@ Beckend-Django.
 ✔️ paginator
 ✔️ Saytni to'liq yakunlash
 
-15. Authentication (1-qism)
+14. Authentication (1-qism)
 ✔️ Django Authentication System tushunchasi
 ✔️ Default User modeli (fields)
 ✔️ User yaratish (createsuperuser, admin orqali)
 ✔️ Login / Logout (LoginView, LogoutView)
 ✔️ Template orqali login form ishlatish
 
-16. Authentication (2-qism)
+15. Authentication (2-qism)
 ✔️ User registration (UserCreationForm)
 ✔️ Custom Signup Form
 ✔️ Profile modeli (OneToOneField)
 ✔️ Profil sahifasi (ProfileView)
 ✔️ Password reset (Django password reset system)
 
-17. Permissions
+16. Permissions
 ✔️ login_required decorator
 ✔️ LoginRequiredMixin
 ✔️ UserPassesTestMixin
 ✔️ permission_required
 ✔️ staff user va superuser farqi
 
-18. Custom User Model (Juda muhim)
+17. Custom User Model (Juda muhim)
 ✔️ Default user muammolari
 ✔️ Custom User Model yaratish
 ✔️ AbstractUser ishlatish
 ✔️ Email yoki telefon orqali login
 
+18. Forms
+✔️ Django Forms
+✔️ ModelForm
+✔️ Validation
+✔️ Clean methods
 
+19. Deployment
+✔️ Git
+✔️ Github
+✔️ Serverga joylash
+✔️ domain ulash
+✔️ Production settings
+✔️ DEBUG = False
+✔️ ALLOWED_HOSTS
+✔️ STATIC_ROOT / collectstatic
+
+20-21-22. Shaxsiy Django(MVT) saytni yaratish va deploy qilish 
